@@ -4,6 +4,9 @@
 % # style notes
 % - it is Cram\'er--Rao not Cram\'er-Rao. And yet Fisher-matrix not Fisher--matrix.
 
+% TODO:
+% - Reference for the dustmaps package? See software section.
+
 \documentclass[modern]{aastex62}
 
 % \usepackage{amsmath}
@@ -52,9 +55,19 @@
 \section{Data}
 \label{sec:data}
 
-(\citealt{Schlegel:1998, Schlafly:2011}; hereafter SFD)
 
-Maximum $A_G$ is $\approx$0.07 mag in both the under-density and gap regions.
+Most of the clearly identifiable portions of the GD-1 stream are located at high
+Galactic latitudes ($b > 35^\circ$), and we therefore do not expect significant
+dust extinction or variations in extinction along the stream.
+\figurename~\ref{fig:sfd} shows the $V$-band extinction in the region around the
+GD-1 stream, computed from the Schlegel-Finkbeiner-Davis extinction map
+(\cite{Schlegel:1998}; hereafter SFD).
+Vertical lines indicate the two regions clearly identifiable as under-densities
+from the proper-motion-selected stream members.
+The maximum $A_V$ is $\approx$0.07 mag in both the under-density and gap
+regions.
+The dispersion in $A_V$ in the region $-60^\circ < \phi_1 < 0^\circ$ and
+$-1^\circ < \phi_1 < 1^\circ$ is $\std_{A_V} \approx 0.03~\textrm{mag}$.
 
 % Notebook: GD1-dust-and-completeness
 \begin{figure}[h]
@@ -98,6 +111,7 @@ All code used in this work and all results are available at \url{https://github.
 
 \software{
     \package{Astropy} \citep{astropy},
+    \package{dustmaps}\footnote{\url{https://github.com/gregreen/dustmaps}},
     \package{gala} \citep{gala},
     \package{IPython} \citep{ipython},
     \package{matplotlib} \citep{mpl},
