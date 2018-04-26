@@ -12,6 +12,7 @@
 \setlength{\parindent}{1.\baselineskip}
 % \newcommand{\acronym}[1]{{\small{#1}}}
 \newcommand{\package}[1]{\textsl{#1}}
+\newcommand{\gaia}{\textsl{Gaia}}
 
 % aastex parameters
 % \received{not yet; THIS IS A DRAFT}
@@ -51,6 +52,25 @@
 \section{Data}
 \label{sec:data}
 
+(\citealt{Schlegel:1998, Schlafly:2011}; hereafter SFD)
+
+Maximum $A_G$ is $\approx$0.07 mag in both the under-density and gap regions.
+
+% Notebook: GD1-dust-and-completeness
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{sfd.pdf}
+\end{center}
+\caption{%
+Colored background shows the \gaia\ $G$-band extinction, $A_G$, in the GD-1
+coordinate system.
+Vertical lines roughly show the regions identified as the under-density (UD) and
+gap.
+The maximum extinction in the UD or Gap regions is $\approx$0.07 mag.
+\label{fig:sfd}
+}
+\end{figure}
+
 
 \section{Results}
 \label{sec:results}
@@ -70,7 +90,7 @@
 
 
 \acknowledgements{
-thanks: Casey, Geha, Hogg, Spergel
+thanks: Casey, Geha, Hogg, Spergel, Koposov
 CCA for hospitality
 AB acknowledges generous support from the Institute for Theory and Computation at Harvard University.
 All code used in this work and all results are available at \url{https://github.com/adrn/GD1-DR2}.
@@ -87,5 +107,23 @@ All code used in this work and all results are available at \url{https://github.
 
 \bibliographystyle{aasjournal}
 \bibliography{gd1}
+
+\clearpage
+
+\appendix
+\section{Completeness check and data validation}
+\label{sec:validate}
+
+% % Notebook:
+% \begin{figure}[h]
+% \begin{center}
+% \includegraphics[width=0.7\textwidth]{nvisits.pdf}
+% \end{center}
+% \caption{%
+% TODO
+% \label{fig:TODO}
+% }
+% \end{figure}
+
 
 \end{document}
