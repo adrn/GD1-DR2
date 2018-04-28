@@ -16,7 +16,9 @@
 \newcommand{\acronym}[1]{{\small{#1}}}
 \newcommand{\package}[1]{\textsl{#1}}
 \newcommand{\gaia}{\textsl{Gaia}}
+\newcommand{\pans}{\textsl{PanSTARRS}}
 \newcommand{\DR}{\acronym{DR2}}
+\newcommand{\msun}{\rm M_\odot}
 
 % aastex parameters
 % \received{not yet; THIS IS A DRAFT}
@@ -44,18 +46,20 @@
 
 
 \begin{abstract}\noindent % trust me
-Tidally-disrupted globular clusters leave behind thin, dynamically-cold streams
+Tidally-disrupted globular clusters are transformed into thin, dynamically-cold streams
 of stars that are extremely valuable tracers of the large- and small-scale
 properties of mass around the Galaxy.
-Many thin stellar streams have been discovered around the Milky Way, the
-majority of which exist in the Galactic halo and are therefore primarily
-sensitive to the distribution of dark matter.
-Here we present astrometric data for one of the longest stellar streams --- the
-``GD-1'' stream --- from data release 2 (\DR) of the \gaia\ mission.
-We re-discover significant density variations along the stream by selecting
-candidate member stars using the exquisite \gaia\ data alone, including the
-existence of a prominent, apparent gap in the stream.
-<Using photometric data from the \pans, we refine our selection ...>
+Most of such streams discovered in the Milky Way reside in its halo, and are therefore primarily sensitive to the distribution of dark matter.
+% Many thin stellar streams have been discovered around the Milky Way, the
+% majority of which exist in the Galactic halo and are therefore primarily
+- cleanest sample, foreground removed w gaia parallaxes; members selected on combination of gaia pm and panstarrs colors
+- we thus got the crispest view of the stream to date, revealing in high resolution the rich structure which was only hinted at in the previous generation of data
+% We present astrometric data for one of the longest stellar streams --- the
+% GD-1 stream --- from the second data release (\DR) of the \gaia\ mission.
+% We re-discover significant density variations along the stream by selecting
+% candidate member stars using the exquisite \gaia\ data alone, including the
+% existence of a prominent, apparent gap in the stream.
+% <Using photometric data from the \pans, we refine our selection ...>
 These density variations --- and especially the gap --- are possible indications
 of past interactions with large, massive perturbers.
 <estimate the mass of interaction...>
@@ -68,7 +72,7 @@ of past interactions with large, massive perturbers.
 
 Dynamically cold stellar streams, likely formed from the tidal disruption of globular clusters, are sensitive to the large and small scale distribution of matter in the halo
 
-Thin stellar streams form from the tidal disruption of low-dispersion stellar systems such as globular clusters \citep[e.g.,][]{TODO}. To date, $\approx$13--14 thin streams have been discovered by searching large-area sky surveys such as the Sloan Digital Sky Survey (SDSS) and Pan-STARRS1 survey (PS1). These previously known thin streams span a wide range of lengths \citep[$\sim$$2$--$60$ deg;][]{bernard14,grillmair06} and masses \citep[$\sim$$10^3$--$10^5~\msun$;][]{TODO,TODO}, however, only two such streams have clear progenitor systems: NGC 5466 and Palomar 5 \citep{TODO,TODO}. Though it has been shown with many independent methods that modeling these thin streams can place strong constraints on the gravitational potential in which they form \citep{apw14,TODO}, many efforts to apply these models to real streams around the Milky Way have been hampered by the small number of known progenitor systems.
+Thin stellar streams form from the tidal disruption of low-dispersion stellar systems such as globular clusters \citep[e.g.,][]{TODO}. To date, $\approx$13--14 thin streams have been discovered by searching large-area sky surveys such as the Sloan Digital Sky Survey (SDSS) and Pan-STARRS1 survey (PS1). These previously known thin streams span a wide range of lengths \citep[$\sim2$--$60$ deg;][]{bernard14,grillmair06} and masses \citep[$\sim10^3$--$10^5~\msun$;][]{TODO,TODO}, however, only two such streams have clear progenitor systems: NGC 5466 and Palomar 5 \citep{TODO,TODO}. Though it has been shown with many independent methods that modeling these thin streams can place strong constraints on the gravitational potential in which they form \citep{apw14,TODO}, many efforts to apply these models to real streams around the Milky Way have been hampered by the small number of known progenitor systems.
 
 
 \section{Data}
@@ -86,7 +90,7 @@ from the proper-motion-selected stream members.
 The maximum $A_V$ is $\approx$0.07 mag in both the under-density and gap
 regions.
 The dispersion in $A_V$ in the region $-60^\circ < \phi_1 < 0^\circ$ and
-$-1^\circ < \phi_1 < 1^\circ$ is $\std_{A_V} \approx 0.03~\textrm{mag}$.
+$-1^\circ < \phi_1 < 1^\circ$ is $\sigma_{A_V} \approx 0.03~\textrm{mag}$.
 
 % Notebook: GD1-dust-and-completeness
 \begin{figure}[h]
@@ -94,9 +98,9 @@ $-1^\circ < \phi_1 < 1^\circ$ is $\std_{A_V} \approx 0.03~\textrm{mag}$.
 \includegraphics[width=\textwidth]{sfd.pdf}
 \end{center}
 \caption{%
-Colored background shows the \gaia\ $G$-band extinction, $A_G$, in the GD-1
+Colored background shows the $V$-band extinction, $A_V$, in the GD-1
 coordinate system.
-Vertical lines roughly show the regions identified as the under-density (UD) and
+Vertical lines roughly show the extents the identified under-density (UD) and
 gap.
 The maximum extinction in the UD or Gap regions is $\approx$0.07 mag.
 \label{fig:sfd}
@@ -122,7 +126,8 @@ The maximum extinction in the UD or Gap regions is $\approx$0.07 mag.
 
 
 \acknowledgements{
-thanks: Belokurov, Casey, Geha, Hogg, Johnston, Koposov, Schlafly, Spergel
+Gaia
+Belokurov, Casey, Geha, Hogg, Johnston, Koposov, Lisanti, Schlafly, Spergel
 This research was started at the NYC Gaia DR2 Workshop at the Center for Computational Astrophysics of the Flatiron Institute in 2018 April.
 AB acknowledges generous support from the Institute for Theory and Computation at Harvard University.
 All code used in this work and all results are available at \url{https://github.com/adrn/GD1-DR2}.
