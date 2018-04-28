@@ -23,7 +23,9 @@
 \newcommand{\gaia}{\textsl{Gaia}}
 \newcommand{\pans}{\textsl{Pan-STARRS}}
 \newcommand{\DR}{\acronym{DR2}}
-\newcommand{\msun}{\rm M_\odot}
+\newcommand{\msun}{\textrm{M}_\odot}
+\newcommand{\kpc}{\textrm{kpc}}
+\newcommand{\feh}{\ensuremath{[\textrm{Fe} / \textrm{H}]}}
 \newcommand{\article}{\textsl{Letter}}
 
 % aastex parameters
@@ -70,55 +72,71 @@ Our model of GD-1 indicates that the stream crosses the Galactic plane at a larg
 \label{sec:intro}
 
 Dynamically cold stellar streams are formed from the tidal disruption of stellar
-systems by the gravitational field of their host galaxy (e.g.,
-\citealt{Johnston:1998}).
+systems by the gravitational field of their host galaxy.
 The phase-space density and mean track of stars in streams therefore encode
 information about the underlying distribution and shape of mass on galactic
-scales (\citealt{Bonaca:2018}).
+scales (e.g., \citealt{Johnston:1999, Bonaca:2018}).
 Most stellar streams are found in the halos of galaxies and are therefore
 important tracers of the large-scale distribution of dark matter in galactic
 halos.
 
-Streams formed from globular cluster systems are particularly useful as they can
-theoretically remain coherent for tens of orbital periods, depending in detail
-on the symmetries of the underlying galactic mass distribution
-(\citealt{Erkal:...}).
-This makes them excellent laboratories for studying small-scale structures in
-the mass distribution, as it is expected that density perturbations caused by
-interactions with massive perturbers can persist and remain visible for close to
-their survival time (e.g., \citealt{Yoon:2011}).
+Long, thin stellar streams are also excellent laboratories for studying
+small-scale structures in the mass distribution:
+thin streams can remain coherent for tens of orbital periods, depending in
+detail on the symmetries of the underlying galactic mass distribution (e.g.,
+\citealt{Erkal:2016}).
+Encounters between massive perturbers and stream stars imprint variations in the
+phase-space density that can persist and remain visible for close to their total
+survival time (e.g., \citealt{Yoon:2011}).
 In this sense, streams represent one of the most promising directions for
 studying or ruling out the existence of small-scale dark matter sub-halos, as
 would be predicted by standard $\Lambda$ Cold Dark Matter ($\Lambda$CDM) theory
-(\citealt{Erkal, Sanders, Bovy} papers).
+(\citealt{Erkal:2015, Sanders:2016, Bovy:2017}).
 
-While globular cluster streams are hard to detect around distant galaxies
-because of their low relative surface density, over 30 candidate stellar streams
-have been discovered throughout the halo of the Milky Way, largely thanks to
-large-area, multi-band photometric surveys (e.g., the Sloan Digital Sky Survey,
-SDSS; \citealt{York:2000, TODO}).
+Over 30 candidate stellar streams have been discovered throughout the halo of
+the Milky Way, largely thanks to large-area, multi-band photometric surveys
+(especially the Sloan Digital Sky Survey, SDSS; \citealt{York:2000}).
 The Milky Way streams have a wide range of properties such as length, velocity
-dispersion, and density (e.g., \citealt{SoManyPeople,Bonaca:2012}; see also the
-recent review \citealt{Grillmair:2016, Newberg:2016}), and the majority have no
-obvious, bound progenitor systems; Of the thin, likely globular-cluster-origin
-streams, only two have clear progenitors (NGC 5466 and Palomar 5; \citealt{TODO,
-TODO}).
+dispersion, and density (e.g., \citealt{Odenkirchen:2001, Grillmair:2006,
+Grillmair:2006b, Belokurov:2006, Belokurov:2007, Bonaca:2012, Shipp:2018}; see
+also the recent review \citealt{Grillmair:2016, Newberg:2016}), and the majority
+have no obvious, bound progenitor systems;
+of the thin, likely globular-cluster-origin streams, only two have clear
+progenitors (NGC 5466 and Palomar 5).
 
 The most prominent and longest (in angle) thin stream is the GD-1 stream, named
 after its discoverers (\citealt{Grillmair:2006}).
-GD-1 was found by matched-filtering photometry from the SDSS and spans over
-$60^\circ$ in Heliocentric sky coordinates, partially because of its relative
-closeness to the sun ($\approx 7$--$10~\textrm{kpc}$).
+GD-1 was found using a matched filter on photometric data from the SDSS and
+spans over $60^\circ$ in Heliocentric sky coordinates, partially because of its
+relative closeness to the sun ($\approx 7$--$10~\textrm{kpc}$).
 Despite its proximity, no remnant progenitor cluster or stellar system has been
-found associated with the stream.
-[Long, somewhat close: useful for constraining large-scale potential (\citealt{Koposov:2009})]
+found associated with the stream, but its metallicity ($\feh \approx -1.4$;
+\citealt{Koposov:2010}) and estimated stellar mass ($M \approx 2 \times
+10^4~\msun$; \citealt{Koposov:2010}) are consistent with being a disrupted
+globular cluster.
 
-[Small velocity dispersion (quote number?), likely old, retrograde orbit far
-from galactic disk, so prime place to search for relics of past subhalo
-interactions]
-[Known density wiggles and blah (\citealt{DeBoer:2017}), but color-magnitude only, bin stars]
+The long physical length of the GD-1 stream ($\sim 15~\kpc$) and location in the
+Galactic halo (pericentric distance $r_\textrm{peri} \sim 13~\kpc$) make it an
+ideal object for constraining the gravitational potential of dark matter in the
+inner Milky Way halo.
+Indeed, both from fitting orbits to binned phase-space measurements along the
+GD-1 stream (\citealt{Koposov:2010}) and from modeling the stream track in
+phase-space coordinates (\citealt{Bovy:2016}), it has been shown that the dark
+matter distribution within its orbit is consistent with or nearly spherical.
 
-In this \article, we present the cleanest view of the GD-1 stream using
+Its long length --- and therefore its implied old dynamical age --- and its
+particular orbit also make it a prime stream to search for interactions with
+dark matter subhalos:
+because of its large pericentric distance and retrograde orbit with respect to
+the Galactic bar, density variations in the stream are not expected from either
+interactions with giant molecular clouds (\citealt{TODO}) or resonant
+interactions with the bar (\citealt{Pearson:2017}).
+It is particularly exciting, therefore, that deep photometry of the stream has
+revealed interesting small-scale ``wiggles'' and density variations along a
+$\approx 45^\citc$ span of the stream (\citealt{DeBoer:2017}).
+, but color-magnitude only, bin stars]
+
+In this \article, we present a the cleanest view of the GD-1 stream using
 astrometric data from the \gaia\ mission data release 2 (\DR).
 Combined with photometry from \pans\ ...
 We revisit...do not try to model or fit for Galactic potential. Focus on stream properties, data.
@@ -131,11 +149,6 @@ We revisit...do not try to model or fit for Galactic potential. Focus on stream 
 - Cut to be close to latitude = 0
 - Cut to get proper motion over-density
 - Color-magnitude filtering
-
-Figure 1:
-- PM cut (panel a)
-- PM + CMD cut (panel b)
-- SFD (panel c)??
 
 Comment on these here - add figure for both in Appendix?
 - Dust / no significant extinction - combine with other figure
