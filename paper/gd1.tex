@@ -42,19 +42,21 @@
 \begin{document}\sloppy\sloppypar\raggedbottom\frenchspacing % trust me
 
 \title{Off the beaten path: \\
-       ...}
+       Clear density variations in the GD-1 stream and star perturbed off the
+       stream track}
 % Gaia DR2 reveals stream stars...
 % A first look at the GD-1 stellar stream with Gaia DR2
 
 \author[0000-0003-0872-7098]{Adrian~M.~Price-Whelan}
+\altaffiliation{These authors contributed equally to this work.}
 \affiliation{Department of Astrophysical Sciences,
              Princeton University, Princeton, NJ 08544, USA}
 \email{adrn@astro.princeton.edu}
 \correspondingauthor{Adrian M. Price-Whelan}
 
 \author[0000-0002-7846-9787]{Ana Bonaca}
+\altaffiliation{These authors contributed equally to this work.}
 \affil{Harvard--Smithsonian Center for Astrophysics, Cambridge, MA 02138, USA}
-
 
 \begin{abstract}\noindent % trust me
 Tidally-disrupted globular clusters are transformed into thin, dynamically-cold
@@ -91,7 +93,7 @@ Long, thin stellar streams are also excellent laboratories for studying
 small-scale structures in the mass distribution:
 thin streams can remain coherent for tens of orbital periods, depending in
 detail on the symmetries of the underlying galactic mass distribution (e.g.,
-\citealt{Erkal:2016}).
+\citealt{Erkal:2016a}).
 Encounters between massive perturbers and stream stars imprint variations in the
 phase-space density that can persist and remain visible for close to their total
 survival time (e.g., \citealt{Yoon:2011}).
@@ -160,6 +162,18 @@ Focus on stream properties, data.
 
 \section{Data}
 \label{sec:data}
+
+We use astrometric data from the \gaia\ mission (\citealt{Prusti:2016}), data
+release 2 (\citealt{Gaia-Collaboration:2018, Lindegren:2018}), and photometry
+from the \pans\ survey, data release 1 (\citealt{Chambers:2016}).
+We retrieve data along the previously-identified track of the GD-1 stream and
+the \gaia\ science archive\footnote{\url{https://gea.esac.esa.int/}} by
+selecting all sources with small parallax, $\varpi < 1~\textrm{mas}$, and use
+the spherical polygon functionality to select batches of stars that have small
+latitude, $\phi_2$, in the GD-1 coordinate system defined in
+\cite{Koposov:2010}.\footnote{This transformation is implemented using the
+\package{Astropy} (\citealt{astropy}) coordinate transformation framework in the
+\package{Gala} \texttt{Python} package (\citealt{gala}).}
 
 - Transform to GD-1 coordinates (Koposov et al.)
     - Can see deviation from great circle
