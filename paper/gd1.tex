@@ -221,7 +221,7 @@ the sample to the \pans\ photometric catalog and use the photometry to further
 clean the sample.
 \figurename~\ref{fig:selection} (bottom right) shows the distribution of
 proper-motion-selected candidate stream stars in a de-reddened \pans\
-color-magnitude diagram.
+color-magnitude diagram (CMD).
 \todo{Did you also cut on $phi_2$?}.
 The over-plotted isochrone is from the MESA Isochrones \& Stellar Tracks (MIST;
 \citealt{Dotter:2016, Choi:2016, Paxton:2011}) and represents a
@@ -240,9 +240,9 @@ stream so far}
 All of the clearly identifiable portions of the GD-1 stream are located at high
 Galactic latitudes ($b > 20^\circ$), and we therefore do not expect significant
 dust extinction or variations in extinction along the stream.
-\figurename~\ref{fig:sfd} shows the $V$-band extinction in the region around the
-GD-1 stream, computed from the Schlegel-Finkbeiner-Davis extinction map
-(\cite{Schlegel:1998}; hereafter SFD).
+\figurename~\ref{fig:sfd-cmd} (top panel) shows the $V$-band extinction in the
+region around the GD-1 stream, computed from the Schlegel-Finkbeiner-Davis
+extinction map (\cite{Schlegel:1998}; hereafter SFD).
 For stream longitudes $-60^\circ < \phi_1 < 10^\circ$ and $-1^\circ < \phi_2 <
 1^\circ$, the median $V$-band extinction is $\textrm{med}\left(A_V\right) =
 0.04~\mag$, and the dispersion in $A_V$ in this region is $\sigma_{A_V} \approx
@@ -255,44 +255,89 @@ However, we find that \todo{...}.
 We discuss the scanning pattern in more detail in
 Appendix~\ref{sec:completeness}.
 
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=\textwidth]{sfd.pdf}
-\end{center}
-\caption{%
-Colored background shows the $V$-band extinction, $A_V$, in the GD-1
-coordinate system.
-Vertical lines roughly show the extents the identified under-density (UD) and
-gap.
-The maximum extinction in the UD or Gap regions is $\approx$0.07 mag.
-\label{fig:sfd}
-}
-\end{figure}
-
 
 \section{Results}
 \label{sec:results}
 
+\todo{segue sentences...}
+
 \subsection{Global properties}
 \label{sec:res_global}
 
-\subsection{Gap}
+\figurename~\ref{fig:sfd-cmd} (middle panel) again shows the proper-motion and CMD selected stream stars, with interesting features
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{sfd-cmd.pdf}
+\end{center}
+\caption{%
+\todo{AB}
+\label{fig:sfd-cmd}
+}
+\end{figure}
+
+
+\subsection{Gaps and under-densities}
 \label{sec:res_gap}
 
-\subsection{Underdensity}
-\label{sec:res_underdensity}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{track-and-model.pdf}
+\end{center}
+\caption{%
+\todo{AB}
+\label{fig:track-and-model}
+}
+\end{figure}
+
+
+\subsection{Spur}
+\label{sec:res_spur}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{spur.pdf}
+\end{center}
+\caption{%
+\todo{AB}
+\label{fig:spur}
+}
+\end{figure}
 
 
 \section{Discussion}
 \label{sec:discussion}
 
 
+\section{Conclusions}
+\label{sec:conclusions}
+
+
 \acknowledgements{
-Gaia
-Belokurov, Casey, Geha, Hogg, Johnston, Koposov, Lisanti, Schlafly, Spergel
-This research was started at the NYC Gaia DR2 Workshop at the Center for Computational Astrophysics of the Flatiron Institute in 2018 April.
-AB acknowledges generous support from the Institute for Theory and Computation at Harvard University.
-All code used in this work and all results are available at \url{https://github.com/adrn/GD1-DR2}.
+It is a pleasure to thank
+Vasily Belokurov,
+Andrew R. Casey,
+Marla Geha,
+David W. Hogg,
+Kathryn V. Johnston,
+Sergey Koposov,
+Mariangela Lisanti,
+Edward Schlafly,
+and David N. Spergel for useful discussions and feedback.
+
+This work has made use of data from the European Space Agency (ESA) mission {\it
+Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the {\it Gaia} Data
+Processing and Analysis Consortium (DPAC,
+\url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC
+has been provided by national institutions, in particular the institutions
+participating in the {\it Gaia} Multilateral Agreement.  This research was
+started at the NYC Gaia DR2 Workshop at the Center for Computational
+Astrophysics of the Flatiron Institute in 2018 April.
+
+AB acknowledges generous support from the Institute for Theory and Computation
+at Harvard University.
+All code used in this work and all results are available at
+\url{https://github.com/adrn/GD1-DR2}.
 }
 
 \software{
@@ -311,7 +356,7 @@ All code used in this work and all results are available at \url{https://github.
 \clearpage
 
 \appendix
-\section{Completeness check and scanning pattern}
+\section{Completeness and the \gaia\ scanning pattern}
 \label{sec:completeness}
 
 % % Notebook:
