@@ -25,6 +25,9 @@
 \newcommand{\DR}{\acronym{DR2}}
 \newcommand{\msun}{\textrm{M}_\odot}
 \newcommand{\kpc}{\textrm{kpc}}
+\newcommand{\kms}{\ensuremath{\textrm{km}~\textrm{s}^{-1}}}
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\newcommand{\masyr}{\ensuremath{\textrm{mas}~\textrm{yr}^{-1}}}
 \newcommand{\feh}{\ensuremath{[\textrm{Fe} / \textrm{H}]}}
 \newcommand{\article}{\textsl{Letter}}
 
@@ -42,8 +45,7 @@
 \begin{document}\sloppy\sloppypar\raggedbottom\frenchspacing % trust me
 
 \title{Off the beaten path: \\
-       Clear density variations in the GD-1 stream and stars perturbed off the
-       stream track}
+       Gaia reveals GD-1 stars perturbed off of the main stream track}
 % Gaia DR2 reveals stream stars...
 % A first look at the GD-1 stellar stream with Gaia DR2
 
@@ -166,19 +168,49 @@ Focus on stream properties, data.
 We use astrometric data from the \gaia\ mission (\citealt{Prusti:2016}), data
 release 2 (\citealt{Gaia-Collaboration:2018, Lindegren:2018}), and photometry
 from the \pans\ survey, data release 1 (\citealt{Chambers:2016}).
-We retrieve data along the previously-identified track of the GD-1 stream and
-the \gaia\ science archive\footnote{\url{https://gea.esac.esa.int/}} by
-selecting all sources with small parallax, $\varpi < 1~\textrm{mas}$, and use
-the spherical polygon functionality to select batches of stars that have small
-latitude, $\phi_2$, in the GD-1 coordinate system defined in
+
+We retrieve \gaia\ data along the previously-identified track of the GD-1 stream
+from the \gaia\ science archive\footnote{\url{https://gea.esac.esa.int/}} by
+selecting all sources with small parallax, $\varpi < 1~\textrm{mas}$, and use a
+set of spherical polygons to select batches of stars that have small latitude in
+the heliocentric GD-1 coordinate system, $(\phi_1, \phi_2)$, defined in
 \cite{Koposov:2010}.\footnote{This transformation is implemented using the
 \package{Astropy} (\citealt{astropy}) coordinate transformation framework in the
 \package{Gala} \texttt{Python} package (\citealt{gala}).}
+We convert the sky coordinates and proper motions of the parallax-selected stars
+to the GD-1 stream coordinate system, and correct the proper motions for solar
+reflex motion by assuming that stars at a given stream longitude, $\phi_1$, have
+a distance given by the linear relationship $d(\phi_1) = (0.05 \, \phi_1 +
+10)~\textrm{kpc}$.
+For the solar velocity in a Galactocentric rest frame, we use $\bs{v}_\odot =
+(11.1, 232.24, 7.25)~\kms$ (\citealt{Schonrich:2010, Bovy:2015}).
+\figurename~\ref{fig:XX} (top right) shows the distribution of stars with
+$|\phi_2| < XX^\circ$ in solar-reflex-corrected proper motion components in the
+GD-1 coordinate system, $\mu_{\phi_1, \odot}$ (which includes the $\cos{\phi_2}$
+term) and $\mu_{\phi_2, \odot}$.
+GD-1 member stars are visible as the over-density at approximately
+$(\mu_{\phi_1, \odot}, \mu_{\phi_2, \odot}) \approx (XX, YY)~\masyr$.
 
-- Transform to GD-1 coordinates (Koposov et al.)
-    - Can see deviation from great circle
-- Cut to be close to latitude = 0
-- Cut to get proper motion over-density
+As a first selection of GD-1 candidate member stars, we select stars with proper
+motions $XX < \mu_{\phi_1, \odot} < XX~\masyr$ and $XX < \mu_{\phi_2, \odot} <
+XX~\masyr$, as visualized by the rectangle in the top right panel of
+\figurename~\ref{fig:XX}.
+\figurename~\ref{fig:XX} (top left) shows all stars the pass the selection on
+proper motion, plotted in the GD-1 coordinate system.
+From kinematic selection alone, the stream is identifiable as the over-density
+of stars around $\phi_2 = 0$ between longitudes $XX^\circ \lesssim \phi_1
+\lesssim XX^\circ$.
+
+To improve the contrast of the stream over the background, we next cross-match
+the sample to the \pans\ photometric catalog and use the photometry to further
+clean the sample.
+\figurename~\ref{fig:XX} (bottom right) shows the distribution of
+proper-motion-selected candidate stream stars in a de-reddened \pans\
+color-magnitude diagram.
+The over-plotted isochrone is from the MESA Isochrones & Stellar Tracks (MIST;
+\citealt{XX}) and represents a $12~\textrm{Gyr}$ old population with $\feh =
+-1.XX$ at a distance of $XX~\kpc$.
+
 - Color-magnitude filtering
 
 Comment on these here - add figure for both in Appendix?
