@@ -351,7 +351,7 @@ To compute initial conditions for the stream model, we fit an orbit to the
 observed properties of the stream in a fixed model for the gravitational
 potential of the Milky Way.
 We use a three-component potential model to represent the Galaxy, consisting of
-a Miyamoto-Nagai disk (\citealt{Miyamoto:1975}), a Hernqust bulge
+a Miyamoto-Nagai disk (\citealt{Miyamoto:1975}), a Hernquist bulge
 (\citealt{Hernquist:1990}), and a spherical Navarro-Frenk-White dark matter halo
 (\citealt{Navarro:1996}).
 We set the disk scale-length parameters to closely match the disk model found in
@@ -359,9 +359,20 @@ We set the disk scale-length parameters to closely match the disk model found in
 flat rotation curve between $5 < R < 15~\kpc$ with a circular velocity at the
 solar circle, $v_{\textrm{circ}, \odot} \approx 230~\kms$.
 
-To initialize the model stream generation, we \todo{...}
-
-Stream properties computed from resulting model stream are plotted in \figurename~\ref{fig:track-and-model} as \todo{XX}.
+To initialize the model stream generation, we assume that the present day (i.e.
+final) position of the progenitor system is at $\phi_1 = XX^\circ$.
+We integrate backwards for $4~\textrm{Gyr}$ using the orbital parameters at this
+location using the Leapfrog integration scheme with a timestep of
+$0.5~\textrm{Myr}$, then begin the model stream generation using the Lagrange
+point stripping method discussed above.
+Stream particles are release at each timestep of the progenitor orbit
+integration, resulting in 16,000 stream particles by the end of the model stream
+generation.
+We assume an initial progenitor mass of $M=10^5~\msun$, and linearly decrease
+the mass of the progenitor until present day, where we assume $M = 0~\msun$
+(i.e. fully disrupted).
+Stream properties computed from this resulting model stream are plotted in
+\figurename~\ref{fig:track-and-model} as \todo{XX}.
 
 \begin{figure}[h]
 \begin{center}
