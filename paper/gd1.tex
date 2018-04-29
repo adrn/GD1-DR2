@@ -29,6 +29,10 @@
 \newcommand{\feh}{\ensuremath{[\textrm{Fe} / \textrm{H}]}}
 \newcommand{\article}{\textsl{Letter}}
 
+\newcommand{\sectionname}{Section}
+\newcommand{\equationname}{Equation}
+\renewcommand{\tablename}{Table}
+
 \newcommand{\todo}[1]{{\color{red} TODO: #1}}
 
 % aastex parameters
@@ -192,8 +196,8 @@ For the solar velocity in a Galactocentric rest frame, we use $\bs{v}_\odot =
 $|\phi_2| < XX^\circ$ in solar-reflex-corrected proper motion components in the
 GD-1 coordinate system, $\mu_{\phi_1, \odot}$ (which includes the $\cos{\phi_2}$
 term) and $\mu_{\phi_2, \odot}$.
-GD-1 member stars are visible as the over-density at approximately
-$(\mu_{\phi_1, \odot}, \mu_{\phi_2, \odot}) \approx (XX, YY)~\masyr$.
+GD-1 member stars are visible as the over-density around
+$(\mu_{\phi_1, \odot}, \mu_{\phi_2, \odot}) \approx (-8, 0)~\masyr$.
 
 As a first selection of GD-1 candidate member stars, we select stars with proper
 motions $XX < \mu_{\phi_1, \odot} < XX~\masyr$ and $XX < \mu_{\phi_2, \odot} <
@@ -215,75 +219,125 @@ of stars around $\phi_2 = 0$ between longitudes $XX^\circ \lesssim \phi_1
 }
 \end{figure}
 
-To improve the contrast of the stream over the background, we next cross-match
-the sample to the \pans\ photometric catalog and use the photometry to further
-clean the sample.
+To improve the contrast of the stream over the background, we cross-match the
+sample to the \pans\ photometric catalog and use the photometry to further clean
+the sample.
 \figurename~\ref{fig:selection} (bottom right) shows the distribution of
 proper-motion-selected candidate stream stars in a de-reddened \pans\
 color-magnitude diagram (CMD).
-\todo{Did you also cut on $phi_2$?}.
-The over-plotted isochrone is from the MESA Isochrones \& Stellar Tracks (MIST;
-\citealt{Dotter:2016, Choi:2016, Paxton:2011}) and represents a
+\todo{AB: Did you also cut on $phi_2$?}.
+The over-plotted isochrone (red line) is from the MESA Isochrones \& Stellar
+Tracks (MIST; \citealt{Dotter:2016, Choi:2016, Paxton:2011}) and represents a
 $12~\textrm{Gyr}$ old population with $\feh = -1.XX$ at a distance of $XX~\kpc$.
 We use this isochrone to motivate a polygonal selection in de-reddened $g-i$
-color and apparent $g$-band magnitude, as visualized by the \todo{shaded} region
-in the bottom right panel of \figurename~\ref{fig:selection}.
+color and apparent $g$-band magnitude, as visualized by the shaded region in the
+bottom right panel of \figurename~\ref{fig:selection}.
 
 \figurename~\ref{fig:selection} (bottom left) shows the final sample of GD-1
-stream member candidates after selecting on both proper motions and photometry.
-\todo{Comment on how this is the bomb ass diggity and the clearest view of the
-stream so far}
-\todo{Mention the under-densities}
-\todo{Already mention the spur here}
+stream member candidates after selecting on both proper motion and photometry.
+The GD-1 stream is clearly visible in the point density of individual stars (the
+positions are not binned); this is the most pure view of the stream to date.
+The increased contrast shows that the stream extends at least another $20^\circ$
+to negative longitudes.
+Several of the under-densities and gaps hinted at from photometric selection
+alone (\citealt{Koposov:2010, Carlberg:2013}) appear as striking features in
+this significantly cleaner density map of the GD-1 stream.
+Finally, at least two new features are visible in this new view of the stream:
+(1) ``the spur,'' stars above the main stream track (in $\phi_2$) between
+$-40^\circ \lesssim \phi_1 \lesssim -30^\circ$, and (2) ``the blob,'' stars
+below the main stream track between $-20^\circ \lesssim \phi_1 \lesssim
+-10^\circ$.
+We discuss each of these in more detail in \sectionname
+s~\ref{sec:results}--\ref{sec:discussion} below.
+
 
 \section{Results}
 \label{sec:results}
 
-- properties of GD-1 along the track, and beyond
+We extract high-confidence stream stars from the proper motion and CMD selected
+sample by further selecting stars close to the main stream track.
+We use these main stream track stars to study the global properties of the
+stream, and find interesting substructures off of the main stream track.
 
 \subsection{Global properties}
 \label{sec:res_global}
 
-- for study of global properties, we first find stream ridge points as a median $\phi_2$ every $x^\circ$ along $\phi_1$
-- then we fit a second order polynomial to these ridge points, and define a stream track as the region $0.6^\circ$ above and beyond the best-fit polynomial (shown with two blue lines in Figure~\ref{fig:track-and-model})
+To study of global properties of the stream as a function of stream longitude,
+we extract stream stars around a low-order polynomial model for the median
+stream latitude, $\phi_2$, as a function of stream longitude, $\phi_1$.
+In detail, we find stream ridge points by computing a running median in $\phi_2$
+in steps of $XX^\circ$ along $\phi_1$, then fit a second-order polynomial to the
+ridge points to find $\phi_{2, \textrm{track}}(\phi_1)$.
+We define the stream as the region within $\left| \phi_2 - \phi_{2,
+\textrm{track}}(\phi_1) \right| < 0.6^\circ$.
+\figurename~\ref{fig:XX} (XX panel) again shows the high-confidence
+stream stars, and the two curved lines (blue) show the upper and lower boundary
+of the stream region.
+
+\begin{figure}[h]
+\begin{center}
+% \includegraphics[width=\textwidth]{???.pdf}
+\end{center}
+\caption{%
+\todo{???}
+\label{fig:XX}
+}
+\end{figure}
+
+The clearly identifiable portions of the GD-1 stream are located at high
+Galactic latitudes ($b > 20^\circ$), and we therefore do not expect significant
+dust extinction or variations in extinction within the stream region.
+\figurename~\ref{fig:XX} (XX panel) shows the $V$-band extinction
+in the region around the GD-1 stream, computed from the
+Schlegel-Finkbeiner-Davis extinction map (\cite{Schlegel:1998}; hereafter SFD).
+For stream longitudes $-60^\circ < \phi_1 < 10^\circ$ and $-1^\circ < \phi_2 <
+1^\circ$, the median $V$-band extinction is $\textrm{med}\left(A_V\right) =
+0.04~\textrm{mag}$, and the dispersion in $A_V$ in this region is $\sigma_{A_V}
+\approx 0.03~\textrm{mag}$.
+For longitudes $\phi_1 < -60^\circ$, as the stream approaches the Galactic disk,
+dust extinction becomes more appreciable, and the stream stars are harder to
+select apart from the background.
+
+We extract properties of the stream from the stream region defined above as a
+function of $\phi_1$ by computing properties in overlapping windows:
+we set the window size to $XX^\circ$ in $\phi_1$, and shift the window center by
+$1^\circ$ along the stream region.
+\figurename~\ref{fig:track-and-model} shows the median latitude, $\phi_2$,
+stream surface density, $XX$, stream width, $XX$, and median proper motions,
+$\mu_{\phi_1}$ and $\mu_{\phi_2}$, extracted in this way.
+For the surface density, we subtract an estimate of the background surface
+density by \todo{AB}.
+To estimate the stream width, $w$, we compute the median absolute deviation,
+$\textrm{MAD}$, and use this to estimate a robust standard deviation, $w = 1.5
+\times MAD$.
+
+\todo{Comment on density variations, stream width variations. Do we want a
+$\Delta \phi_2$ plot (relative to mean stream track) with 15th/85th
+percentiles?}
 
 - first measure density variations in background subtracted profile
 - find maximum -- morphology as expected from a progenitor in the final stages of dissolution (cit)
 - several prominent gaps: density contrast, width
 - some (all?) seen in earlier data
 - but not related to dust
-All of the clearly identifiable portions of the GD-1 stream are located at high
-Galactic latitudes ($b > 20^\circ$), and we therefore do not expect significant
-dust extinction or variations in extinction along the stream.
-\figurename~\ref{fig:track-and-model} (top panel) shows the $V$-band extinction in the
-region around the GD-1 stream, computed from the Schlegel-Finkbeiner-Davis
-extinction map (\cite{Schlegel:1998}; hereafter SFD).
-For stream longitudes $-60^\circ < \phi_1 < 10^\circ$ and $-1^\circ < \phi_2 <
-1^\circ$, the median $V$-band extinction is $\textrm{med}\left(A_V\right) =
-0.04~\textrm{mag}$, and the dispersion in $A_V$ in this region is $\sigma_{A_V} \approx
-0.03~\textrm{mag}$.
-For longitudes $\phi_1 < -60^\circ$, as the stream approaches the Galactic disk,
-dust extinction becomes more appreciable.
 
-Another \todo{segue to this paragraph...}.
-However, we find that \todo{...}.
-We discuss the scanning pattern in more detail in
-Appendix~\ref{sec:completeness}.
+We compare the measured stream properties to a simple model for the phase-space
+density of the stream, generated by only simulating the orbital evolution of
+cluster stars once they are tidally stripped from the progenitor.
+In detail, during simulation, star particles are released from the Lagrange
+points of the cluster with a spread in position and velocity set by the mass of
+the satellite and the location within the host galaxy, with some tunable scale
+parameters.
+We use the parametrization and adopted scale parameters of \citet{Fardal:2015},
+who fit the release distribution parameters by comparing to full $N$-body
+simulations across a range of mass and orbital parameters.
+This method can accurately reproduce the mean track of the resulting stream, but
+the density of stars along the stream depends strongly on the mass-loss history
+and internal kinematics of the progenitor system.
+Here we assume a constant mass-loss rate, and release stream particles uniformly
+in time from each Lagrange point.
 
 
-\section{Results}
-\label{sec:results}
-
-\todo{segue sentences...}
-
-\subsection{Global properties}
-\label{sec:res_global}
-
-From the combined proper motion and CMD selection of stream members
-(\sectionname~\ref{sec:data}), it is now clear that the GD-1 stream extends
-at least $90^\circ$ in apparent length.
-Several clear under-densities and gaps are also
-\figurename~\ref{fig:sfd-cmd} (middle panel) again shows the proper-motion and CMD selected stream stars, with several features
 
 \begin{figure}[h]
 \begin{center}
@@ -294,18 +348,6 @@ Several clear under-densities and gaps are also
 \label{fig:track-and-model}
 }
 \end{figure}
-
-- also show median properties along the stream 5deg window, 1deg spacings
-- coordinates and proper motion vary
-- these observations are reproduced with a simple model
-
-% \todo{segue sentences...}
-
-% Another \todo{segue to this paragraph...}.
-% However, we find that \todo{...}.
-% We discuss the scanning pattern in more detail in
-% Appendix~\ref{sec:completeness}.
-
 
 
 \subsection{Off-track features}
@@ -362,6 +404,12 @@ Several clear under-densities and gaps are also
 
 % \section{Conclusions}
 % \label{sec:conclusions}
+
+% From the combined proper motion and CMD selection of stream members
+% (\sectionname~\ref{sec:data}), it is now clear that the GD-1 stream extends
+% at least $90^\circ$ in apparent length.
+% Several clear under-densities and gaps are also
+% \figurename~\ref{fig:sfd-cmd} (middle panel) again shows the proper-motion and CMD selected stream stars, with several features
 
 
 \acknowledgements{
