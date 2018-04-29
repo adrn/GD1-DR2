@@ -337,7 +337,21 @@ and internal kinematics of the progenitor system.
 Here we assume a constant mass-loss rate, and release stream particles uniformly
 in time from each Lagrange point.
 
+To compute initial conditions for the stream model, we fit an orbit to the
+observed properties of the stream in a fixed model for the gravitational
+potential of the Milky Way.
+We use a three-component potential model to represent the Galaxy, consisting of
+a Miyamoto-Nagai disk (\citealt{Miyamoto:1975}), a Hernqust bulge
+(\citealt{Hernquist:1990}), and a spherical Navarro-Frenk-White dark matter halo
+(\citealt{Navarro:1996}).
+We set the disk scale-length parameters to closely match the disk model found in
+\citet{Bovy:2015}, and other parameters are set to reproduce an approximately
+flat rotation curve between $5 < R < 15~\kpc$ with a circular velocity at the
+solar circle, $v_{\textrm{circ}, \odot} \approx 230~\kms$.
 
+To initialize the model stream generation, we \todo{...}
+
+Stream properties computed from resulting model stream are plotted in \figurename~\ref{fig:track-and-model} as \todo{XX}.
 
 \begin{figure}[h]
 \begin{center}
