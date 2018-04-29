@@ -25,6 +25,7 @@
 \newcommand{\DR}{\acronym{DR2}}
 \newcommand{\msun}{\textrm{M}_\odot}
 \newcommand{\kpc}{\textrm{kpc}}
+\newcommand{\mag}{\textrm{mag}}
 \newcommand{\kms}{\ensuremath{\textrm{km}~\textrm{s}^{-1}}}
 \newcommand{\bs}[1]{\boldsymbol{#1}}
 \newcommand{\masyr}{\ensuremath{\textrm{mas}~\textrm{yr}^{-1}}}
@@ -164,6 +165,7 @@ We find XX under-densities gaps, some consistent with ...
 We revisit...do not try to model or fit for Galactic potential.
 Focus on stream properties, data.
 
+
 \section{Data}
 \label{sec:data}
 
@@ -232,26 +234,27 @@ in the bottom right panel of \figurename~\ref{fig:selection}.
 stream member candidates after selecting on both proper motions and photometry.
 \todo{Comment on how this is the bomb ass diggity and the clearest view of the
 stream so far}
+\todo{Mention the under-densities}
 \todo{Already mention the spur here}
 
-Comment on these here - add figure for both in Appendix?
-- Dust / no significant extinction - combine with other figure
-- Scanning pattern - just discuss, no figure
-
-Most of the clearly identifiable portions of the GD-1 stream are located at high
-Galactic latitudes ($b > 35^\circ$), and we therefore do not expect significant
+All of the clearly identifiable portions of the GD-1 stream are located at high
+Galactic latitudes ($b > 20^\circ$), and we therefore do not expect significant
 dust extinction or variations in extinction along the stream.
 \figurename~\ref{fig:sfd} shows the $V$-band extinction in the region around the
 GD-1 stream, computed from the Schlegel-Finkbeiner-Davis extinction map
 (\cite{Schlegel:1998}; hereafter SFD).
-Vertical lines indicate the two regions clearly identifiable as under-densities
-from the proper-motion-selected stream members.
-The maximum $A_V$ is $\approx$0.07 mag in both the under-density and gap
-regions.
-The dispersion in $A_V$ in the region $-60^\circ < \phi_1 < 0^\circ$ and
-$-1^\circ < \phi_1 < 1^\circ$ is $\sigma_{A_V} \approx 0.03~\textrm{mag}$.
+For stream longitudes $-60^\circ < \phi_1 < 10^\circ$ and $-1^\circ < \phi_2 <
+1^\circ$, the median $V$-band extinction is $\textrm{med}\left(A_V\right) =
+0.04~\mag$, and the dispersion in $A_V$ in this region is $\sigma_{A_V} \approx
+0.03~\textrm{mag}$.
+For longitudes $\phi_1 < -60^\circ$, as the stream approaches the Galactic disk,
+dust extinction becomes more appreciable.
 
-% Notebook: GD1-dust-and-completeness
+Another \todo{segue to this paragraph...}.
+However, we find that \todo{...}.
+We discuss the scanning pattern in more detail in
+Appendix~\ref{sec:completeness}.
+
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=\textwidth]{sfd.pdf}
@@ -308,8 +311,8 @@ All code used in this work and all results are available at \url{https://github.
 \clearpage
 
 \appendix
-\section{Completeness check and data validation}
-\label{sec:validate}
+\section{Completeness check and scanning pattern}
+\label{sec:completeness}
 
 % % Notebook:
 % \begin{figure}[h]
