@@ -1,9 +1,6 @@
 % This file is part of the stream_information project.
 % Copyright 2017 the authors. All rights reserved.
 
-% # style notes
-% - it is Cram\'er--Rao not Cram\'er-Rao. And yet Fisher-matrix not Fisher--matrix.
-
 % TODO:
 % - Reference for the dustmaps package? See software section.
 
@@ -25,7 +22,7 @@
 \newcommand{\DR}{\acronym{DR2}}
 \newcommand{\msun}{\textrm{M}_\odot}
 \newcommand{\kpc}{\textrm{kpc}}
-\newcommand{\mag}{\textrm{mag}}
+% \newcommand{\mag}{\textrm{mag}}
 \newcommand{\kms}{\ensuremath{\textrm{km}~\textrm{s}^{-1}}}
 \newcommand{\bs}[1]{\boldsymbol{#1}}
 \newcommand{\masyr}{\ensuremath{\textrm{mas}~\textrm{yr}^{-1}}}
@@ -73,10 +70,10 @@ We present a sample of highly-probable members of the longest cold stream, GD-1,
 selected to have small parallaxes and retrograde proper motions using data from
 the \gaia\ mission, and \pans\ photometry consistent with an old and metal-poor
 population at a distance of $\sim10~\kpc$.
-This selection extended the stream by $10^\circ$(?), revealed a possible location of the progenitor and mapped significant density variations along the stream in unprecedented detail.
+This selection extended the stream by $20^\circ$, revealed a possible location of the progenitor and mapped significant density variations along the stream in unprecedented detail.
 In addition to several prominent gaps, for the first time we also find evidence of stream members off the main track.
 No(?) secular formation mechanisms predict the existence of such spurs, but they are a natural result of a stream interaction with a massive perturber.
-Based on the impulse approximation arguments, we estimate that the detected underdensity and the associated spur could have been induced by a perturbation of a $\sim10^7\,\rm M_\odot$(?) object $\sim 0.5\,$Gyr ago.
+Using the impulse approximation arguments, we estimate that the detected underdensity and the associated spur could have been induced by a perturbation of a $\sim10^7\,\rm M_\odot$(?) object $\sim 0.5\,$Gyr ago.
 Our model of GD-1 indicates that the stream crosses the Galactic plane at a large radius, which puts the likely origin of the perturber beyond the stellar disk.
 \end{abstract}
 
@@ -103,8 +100,8 @@ Encounters between massive perturbers and stream stars imprint variations in the
 phase-space density that can persist and remain visible for close to their total
 survival time (e.g., \citealt{Yoon:2011}).
 In this sense, streams represent one of the most promising directions for
-studying or ruling out the existence of small-scale dark matter sub-halos, as
-would be predicted by standard $\Lambda$ Cold Dark Matter ($\Lambda$CDM) theory
+testing the existence of small-scale dark matter sub-halos, predicted by
+standard $\Lambda$ Cold Dark Matter ($\Lambda$CDM) theory
 (\citealt{Erkal:2015, Sanders:2016, Bovy:2017}).
 
 Over 30 candidate stellar streams have been discovered throughout the halo of
@@ -122,7 +119,7 @@ The most prominent and longest (in angular extent) thin stream is the GD-1
 stream (named after its discoverers; \citealt{Grillmair:2006}).
 GD-1 was found using a matched filter on photometric data from the SDSS and
 was found to span $\approx 60^\circ$ in Heliocentric sky coordinates, partially
-because of its relative proximity to the sun ($\approx 7$--$10~\textrm{kpc}$).
+because of its relative proximity to the Sun ($\approx 7$--$10~\textrm{kpc}$).
 Despite being close and relatively high surface-density, no remnant progenitor
 cluster or stellar system has been found associated with the stream, but its
 width,  metallicity ($\feh \approx -1.4$; \citealt{Koposov:2010}) and estimated
@@ -135,7 +132,7 @@ ideal object for constraining the gravitational potential of dark matter in the
 inner Milky Way.
 Indeed, both from fitting orbits to binned phase-space measurements along the
 GD-1 stream (\citealt{Koposov:2010}) and from modeling the stream track in
-phase-space coordinates (\citealt{Bovy:2016}), it has been used to show that the
+phase-space coordinates \citep{Bowden:2015, Bovy:2016}, it has been used to show that the
 dark matter distribution within its orbit is consistent with being close to
 spherical.
 
@@ -151,12 +148,14 @@ mass of $10^5~\msun$, and by taking a subhalo mass function and density from
 XXX, \citet{Erkal:2016} predict that GD-1 could have up to one significant, wide
 ($\approx 5$--$7^\circ$) gap caused by an interaction with a
 $10^6$--$10^7~\msun$ subhalo.
+\todo{implications of subhalo detection (cite bullock review along the lines: on small scales, lcdm has some issues, so alternative classes of models proposed, some that lack structure on small scales; so ruling on the existence of subhalos expected to be detectable with GD-1 directly informs the nature of dark matter.)}
 
 \todo{hints of density variations} from initial work Koposov:2010, later confirmed by density modeling, but all low significance
 (\citealt{Carlberg:2013}).
 More recently, deep photometry of GD-1 from CFHT/Megacam has revealed
-interesting small-scale ``wiggles'' and significant density variations along a $\approx 45^\citc$ span of the stream (\citealt{DeBoer:2017}):
+interesting small-scale ``wiggles'' and significant density variations along a $\approx 45^\circ$ span of the stream (\citealt{DeBoer:2018}):
 [summarize their conclusions].
+\todo{these analyses relied on binned data, still contaminated by MW stars}
 
 In this \article, we present clearest view of the GD-1 stream to date using
 astrometric data from the \gaia\ mission data release 2 (\DR) combined with
@@ -208,7 +207,7 @@ of stars around $\phi_2 = 0$ between longitudes $XX^\circ \lesssim \phi_1
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=\textwidth]{stream-selection.pdf}
+\includegraphics[width=\textwidth]{gd1_sample.pdf}
 \end{center}
 \caption{
     \todo{AB}
@@ -237,15 +236,31 @@ stream so far}
 \todo{Mention the under-densities}
 \todo{Already mention the spur here}
 
+\section{Results}
+\label{sec:results}
+
+- properties of GD-1 along the track, and beyond
+
+\subsection{Global properties}
+\label{sec:res_global}
+
+- for study of global properties, we first find stream ridge points as a median $\phi_2$ every $x^\circ$ along $\phi_1$
+- then we fit a second order polynomial to these ridge points, and define a stream track as the region $0.6^\circ$ above and beyond the best-fit polynomial (shown with two blue lines in Figure~\ref{fig:track-and-model})
+
+- first measure density variations in background subtracted profile
+- find maximum -- morphology as expected from a progenitor in the final stages of dissolution (cit)
+- several prominent gaps: density contrast, width
+- some (all?) seen in earlier data
+- but not related to dust
 All of the clearly identifiable portions of the GD-1 stream are located at high
 Galactic latitudes ($b > 20^\circ$), and we therefore do not expect significant
 dust extinction or variations in extinction along the stream.
-\figurename~\ref{fig:sfd-cmd} (top panel) shows the $V$-band extinction in the
+\figurename~\ref{fig:track-and-model} (top panel) shows the $V$-band extinction in the
 region around the GD-1 stream, computed from the Schlegel-Finkbeiner-Davis
 extinction map (\cite{Schlegel:1998}; hereafter SFD).
 For stream longitudes $-60^\circ < \phi_1 < 10^\circ$ and $-1^\circ < \phi_2 <
 1^\circ$, the median $V$-band extinction is $\textrm{med}\left(A_V\right) =
-0.04~\mag$, and the dispersion in $A_V$ in this region is $\sigma_{A_V} \approx
+0.04~\textrm{mag}$, and the dispersion in $A_V$ in this region is $\sigma_{A_V} \approx
 0.03~\textrm{mag}$.
 For longitudes $\phi_1 < -60^\circ$, as the stream approaches the Galactic disk,
 dust extinction becomes more appreciable.
@@ -272,49 +287,81 @@ Several clear under-densities and gaps are also
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=\textwidth]{sfd-cmd.pdf}
+\includegraphics[width=\textwidth]{track_observables.pdf}
 \end{center}
 \caption{%
-\todo{AB}
-\label{fig:sfd-cmd}
-}
-\end{figure}
-
-
-\subsection{Gaps and under-densities}
-\label{sec:res_gap}
-
-\begin{figure}[h]
-\begin{center}
-\includegraphics[width=\textwidth]{track-and-model.pdf}
-\end{center}
-\caption{%
-\todo{AB}
+\todo{APW}
 \label{fig:track-and-model}
 }
 \end{figure}
 
+- also show median properties along the stream 5deg window, 1deg spacings
+- coordinates and proper motion vary
+- these observations are reproduced with a simple model
 
-\subsection{Spur}
-\label{sec:res_spur}
+% \todo{segue sentences...}
+
+% Another \todo{segue to this paragraph...}.
+% However, we find that \todo{...}.
+% We discuss the scanning pattern in more detail in
+% Appendix~\ref{sec:completeness}.
+
+
+
+\subsection{Off-track features}
+\label{sec:res_gap}
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=\textwidth]{spur.pdf}
+\includegraphics[width=\textwidth]{features.pdf}
 \end{center}
 \caption{%
 \todo{AB}
-\label{fig:spur}
+\label{fig:features}
 }
 \end{figure}
 
+\figurename~\ref{fig:features} (middle panel) again shows the proper-motion and CMD selected stream stars, with interesting features
 
 \section{Discussion}
 \label{sec:discussion}
 
+\begin{figure}[h]
+\begin{center}
+% \includegraphics[width=\textwidth]{spur.pdf}
+\end{center}
+\caption{%
+\todo{APW}
+\label{fig:orbit}
+}
+\end{figure}
 
-\section{Conclusions}
-\label{sec:conclusions}
+- novel way to identify members -- helpful that retrograde, but hopefully also applicable to other streams as kinematic important
+- gd-1 even longer -- useful for potential constraints --> future
+
+- progenitor? if confirmed, can create more realistic models (so far only modeled the whole stream as just a leading or trailing arm)
+- to confirm -- measure actions, which change direction (some bovy paper)?
+
+- no longer simple stream, discuss possible causes
+- evaporation?
+
+- smooth component of the potential?
+-- show orbit
+-- chaos?
+-- bar?
+
+- encounters?
+-- work out mass / time combinations in impulse approximation
+-- comment on GMC vs subhalo
+
+- future:
+-- radial velocities, measure 3d velocity structure (unique predictions)
+-- tests for other outstanding issues
+-- model facets of stream morphology to ascertain if consistent with encounter signatures
+
+
+% \section{Conclusions}
+% \label{sec:conclusions}
 
 
 \acknowledgements{
@@ -323,6 +370,7 @@ Vasily Belokurov,
 Andrew R. Casey,
 Marla Geha,
 David W. Hogg,
+Benjamin D. Johnson,
 Kathryn V. Johnston,
 Sergey Koposov,
 Mariangela Lisanti,
