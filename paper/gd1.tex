@@ -31,6 +31,8 @@
 \newcommand{\feh}{\ensuremath{[\textrm{Fe} / \textrm{H}]}}
 \newcommand{\article}{\textsl{Letter}}
 
+\newcommand{\todo}[1]{{\color{red} TODO: #1}}
+
 % aastex parameters
 % \received{not yet; THIS IS A DRAFT}
 %\revised{not yet}
@@ -146,7 +148,7 @@ encounters with the bar (\citealt{Pearson:2017}).
 By estimating a stream age of $\approx 4~\textrm{Gyr}$ assuming a progenitor
 mass of $10^5~\msun$, and by taking a subhalo mass function and density from
 XXX, \citet{Erkal:2016} predict that GD-1 could have up to one significant, wide
-($\approx 5^\circ$--$7^\circ$) gap caused by an interaction with a
+($\approx 5$--$7^\circ$) gap caused by an interaction with a
 $10^6$--$10^7~\msun$ subhalo.
 
 TODO: hints of density variations from initial work Koposov:2010, later confirmed by density modeling, but all low significance
@@ -167,7 +169,10 @@ Focus on stream properties, data.
 
 We use astrometric data from the \gaia\ mission (\citealt{Prusti:2016}), data
 release 2 (\citealt{Gaia-Collaboration:2018, Lindegren:2018}), and photometry
-from the \pans\ survey, data release 1 (\citealt{Chambers:2016}).
+from the \pans\ survey, data release 1 (\citealt{Chambers:2016}) to select
+high-confidence members of the GD-1 stream.
+
+\subselection{Stream member selection}
 
 We retrieve \gaia\ data along the previously-identified track of the GD-1 stream
 from the \gaia\ science archive\footnote{\url{https://gea.esac.esa.int/}} by
@@ -184,7 +189,7 @@ a distance given by the linear relationship $d(\phi_1) = (0.05 \, \phi_1 +
 10)~\textrm{kpc}$.
 For the solar velocity in a Galactocentric rest frame, we use $\bs{v}_\odot =
 (11.1, 232.24, 7.25)~\kms$ (\citealt{Schonrich:2010, Bovy:2015}).
-\figurename~\ref{fig:XX} (top right) shows the distribution of stars with
+\figurename~\ref{fig:selection} (top right) shows the distribution of stars with
 $|\phi_2| < XX^\circ$ in solar-reflex-corrected proper motion components in the
 GD-1 coordinate system, $\mu_{\phi_1, \odot}$ (which includes the $\cos{\phi_2}$
 term) and $\mu_{\phi_2, \odot}$.
@@ -194,24 +199,43 @@ $(\mu_{\phi_1, \odot}, \mu_{\phi_2, \odot}) \approx (XX, YY)~\masyr$.
 As a first selection of GD-1 candidate member stars, we select stars with proper
 motions $XX < \mu_{\phi_1, \odot} < XX~\masyr$ and $XX < \mu_{\phi_2, \odot} <
 XX~\masyr$, as visualized by the rectangle in the top right panel of
-\figurename~\ref{fig:XX}.
-\figurename~\ref{fig:XX} (top left) shows all stars the pass the selection on
-proper motion, plotted in the GD-1 coordinate system.
+\figurename~\ref{fig:selection}.
+\figurename~\ref{fig:selection} (top left) shows all stars the pass the
+selection on proper motion, plotted in the GD-1 coordinate system.
 From kinematic selection alone, the stream is identifiable as the over-density
 of stars around $\phi_2 = 0$ between longitudes $XX^\circ \lesssim \phi_1
 \lesssim XX^\circ$.
 
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=\textwidth]{stream-selection.pdf}
+\end{center}
+\caption{
+    \todo{AB}
+\label{fig:selection}
+}
+\end{figure}
+
 To improve the contrast of the stream over the background, we next cross-match
 the sample to the \pans\ photometric catalog and use the photometry to further
 clean the sample.
-\figurename~\ref{fig:XX} (bottom right) shows the distribution of
+\figurename~\ref{fig:selection} (bottom right) shows the distribution of
 proper-motion-selected candidate stream stars in a de-reddened \pans\
 color-magnitude diagram.
+\todo{Did you also cut on $phi_2$?}.
 The over-plotted isochrone is from the MESA Isochrones & Stellar Tracks (MIST;
 \citealt{XX}) and represents a $12~\textrm{Gyr}$ old population with $\feh =
 -1.XX$ at a distance of $XX~\kpc$.
+We use this isochrone to motivate a polygonal selection in de-reddened $g-i$
+color and apparent $g$-band magnitude, as visualized by the \todo{shaded} region
+in the bottom right panel of \figurename~\ref{fig:selection}.
 
-- Color-magnitude filtering
+\figurename~\ref{fig:selection} (bottom left) shows the final sample of GD-1
+stream member candidates after selecting on both proper motions and photometry.
+\todo{Comment on how this is the bomb ass diggity and the clearest view of the
+stream so far}
+
+\subselection{Stream member selection}
 
 Comment on these here - add figure for both in Appendix?
 - Dust / no significant extinction - combine with other figure
