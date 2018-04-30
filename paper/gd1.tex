@@ -287,32 +287,46 @@ stream (\S\,\ref{sec:res_global}), and find interesting substructures off of the
 To study the global properties of the stream as a function of stream longitude,
 we extract stream stars around a low-order polynomial model for the median
 stream latitude, $\phi_2$, as a function of stream longitude, $\phi_1$.
-In detail, we find stream ridge points by computing a running median in $\phi_2$
-in steps of $2^\circ$ with a window size of $4^\circ$ along $\phi_1$, then fit a
+We find stream ridge points by computing a running median in $\phi_2$ in steps
+of $2^\circ$ with a window size of $4^\circ$ along $\phi_1$, then fit a
 second-order polynomial to the ridge points to find $\phi_{2,
 \textrm{track}}(\phi_1)$.
-We define the stream as the region within $\left| \phi_2 - \phi_{2,
+We then define the stream as the region within $\left| \phi_2 - \phi_{2,
 \textrm{track}}(\phi_1) \right| < 0.75^\circ$.
 \figurename~\ref{fig:track-and-model} (top panel) again shows the
 high-confidence stream stars, and the two curved lines (blue) show the adopted
 upper and lower boundary of the stream region.
 
 We extract properties of the stream from the region defined above as a function
-of $\phi_1$ by computing stream properties in overlapping windows:
-we set the window size to $4^\circ$ in $\phi_1$, and shift the window center by
-$1^\circ$ in longitude for each measurement.
-Rows 2--5 in \figurename~\ref{fig:track-and-model} show the background-subtracted
-stream surface density, \todo{$\Sigma$?}, the median latitude, $\phi_2$, and median proper motions,
-$\mu_{\phi_1}$ and $\mu_{\phi_2}$, extracted in this way, and the associated empirical scatters
-(blue lines and shaded regions).
-We estimate the local background surface density as an average of areas north and south from the bounded stream region.
+of $\phi_1$ by computing median stream properties in overlapping windows:
+we set the window size to $3^\circ$ in $\phi_1$, and shift the window center by
+$1^\circ$ in longitude for each subsequent measurement.
+Panels 3--5 in \figurename~\ref{fig:track-and-model} show the
+background-subtracted stream surface density and median proper motion
+components, $\mu_{\phi_1}$ and $\mu_{\phi_2}$, extracted in this way (dark
+lines), with the associated empirical scatters (shaded regions).
+We estimate the local background surface density as an average of areas north
+and south of the bounded stream region.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=\textwidth]{track_observables.pdf}
 \end{center}
 \caption{%
-\todo{APW}
+Median stream properties computed from the proper motion and CMD filtered GD-1
+stars, and the same for a toy model for the stream track.
+\textit{Panel (a)}: Sky positions of candidate GD-1 stars selected using \gaia\
+proper motions and \pans\ photometry.
+Lines show a 2nd-order polynomial fit to the median stream track offset by $\pm
+0.75^\circ$; the region between these lines is adopted as the nomial stream
+region.
+\textit{Panel (b)}: Sky positions of simulated star particles from a toy mock
+stream model of the GD-1 stream track.
+\textit{Panel (c)}: Background-subtracted surface-density estimates computed in
+running, overlapping $3^\circ$ windows for both GD-1 data and toy model.
+\textit{Panel (d)}: Median proper motion along the stream longitude computed in
+the same bins as previous panel.
+\textit{Panel (e)}: Same as Panel (d), but for proper motion in stream latitude.
 }
 \label{fig:track-and-model}
 \end{figure}
@@ -334,7 +348,7 @@ dust extinction becomes more appreciable, and the stream stars are harder to
 select apart from the background.
 Second, each star in our sample has at least XX visibility periods, while the sample median and variance are XX and XX, respectively, guaranteeing a robust estimate of proper motions.
 Variations in the number density of faint stars originating from the scanning pattern are XX times smaller than the density variations in the stream, and their spatial distribution does not map to the stream features.
-% The relative ratios between different over- and under-densities might be affected by the \gaia\ completeness at the faint end, but they 
+% The relative ratios between different over- and under-densities might be affected by the \gaia\ completeness at the faint end, but they
 \todo{check above sentences +  fill in}
 
 The density variations likely represent real morphological changes along the
@@ -429,7 +443,7 @@ Proper motions of these stars follow the distribution of stars in adjacent strea
 
 - central panel of figure~\ref{fig:features} shows the map of GD-1, with fields of interest in shaded rectangles
 - we first analyze the spur, region, stream same phi1, phi2 below, and an off-stream field in phi2
-- for each of these fields, we show a pair of plots in the top row: cmd on the left and proper motions on the right. 
+- for each of these fields, we show a pair of plots in the top row: cmd on the left and proper motions on the right.
 - we first select on pm, and show cmd, and then select on cmd and show pm
 - in both of these spaces, selection regions used to make the main catalog are shown in shaded orange.
 - stream field (top left) has clear overdensity in the cmd selection box and clusters in proper motion
@@ -478,11 +492,11 @@ Proper motions of these stars follow the distribution of stars in adjacent strea
 
 - future:
 -- radial velocities, measure 3d velocity structure (unique predictions)
-- delta energy, 
+- delta energy,
 - cleaner selection (any stars in the gap)
 
 - (should go at least to symmetric in positive), not captured with naive selection, as there are gradients
-- prediction: very negative rv, should be easy to map the full extent 
+- prediction: very negative rv, should be easy to map the full extent
 
 % -- tests for other outstanding issues
 -- model facets of stream morphology to ascertain if consistent with encounter signatures
