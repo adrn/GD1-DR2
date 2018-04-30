@@ -287,32 +287,47 @@ stream (\S\,\ref{sec:res_global}), and find interesting substructures off of the
 To study the global properties of the stream as a function of stream longitude,
 we extract stream stars around a low-order polynomial model for the median
 stream latitude, $\phi_2$, as a function of stream longitude, $\phi_1$.
-In detail, we find stream ridge points by computing a running median in $\phi_2$
-in steps of $2^\circ$ with a window size of $4^\circ$ along $\phi_1$, then fit a
+We find stream ridge points by computing a running median in $\phi_2$ in steps
+of $2^\circ$ with a window size of $4^\circ$ along $\phi_1$, then fit a
 second-order polynomial to the ridge points to find $\phi_{2,
 \textrm{track}}(\phi_1)$.
-We define the stream as the region within $\left| \phi_2 - \phi_{2,
+We then define the stream as the region within $\left| \phi_2 - \phi_{2,
 \textrm{track}}(\phi_1) \right| < 0.75^\circ$.
-\figurename~\ref{fig:track-and-model} (top panel) again shows the
-high-confidence stream stars, and the two curved lines (blue) show the adopted
-upper and lower boundary of the stream region.
+\figurename~\ref{fig:track-and-model}, panel (a), shows the high-confidence
+stream stars (same as in lower panel of \figurename~\ref{fig:selection}), and
+the two curved lines (blue) show the adopted upper and lower boundary of the
+stream region.
 
 We extract properties of the stream from the region defined above as a function
-of $\phi_1$ by computing stream properties in overlapping windows:
-we set the window size to $4^\circ$ in $\phi_1$, and shift the window center by
-$1^\circ$ in longitude for each measurement.
-Rows 2--5 in \figurename~\ref{fig:track-and-model} show the background-subtracted
-stream surface density, \todo{$\Sigma$?}, the median latitude, $\phi_2$, and median proper motions,
-$\mu_{\phi_1}$ and $\mu_{\phi_2}$, extracted in this way, and the associated empirical scatters
-(blue lines and shaded regions).
-We estimate the local background surface density as an average of areas north and south from the bounded stream region.
+of $\phi_1$ by computing median stream properties in overlapping windows:
+we set the window size to $3^\circ$ in $\phi_1$, and shift the window center by
+$1^\circ$ in longitude for each subsequent measurement.
+Panels (c)--(e) in \figurename~\ref{fig:track-and-model} show the
+background-subtracted stream surface density and median proper motion
+components, $\mu_{\phi_1}$ and $\mu_{\phi_2}$, extracted in this way (dark
+lines), with the associated empirical scatters (shaded regions).
+We estimate the local background surface density as an average of areas north
+and south of the bounded stream region.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=\textwidth]{track_observables.pdf}
 \end{center}
 \caption{%
-\todo{APW}
+Median stream properties computed from the proper motion and CMD filtered GD-1
+stars, and the same for a toy model for the stream track.
+\textit{Panel (a)}: Sky positions of candidate GD-1 stars selected using \gaia\
+proper motions and \pans\ photometry.
+Lines show a 2nd-order polynomial fit to the median stream track offset by $\pm
+0.75^\circ$; the region between these lines is adopted as the nomial stream
+region.
+\textit{Panel (b)}: Sky positions of simulated star particles from a toy mock
+stream model of the GD-1 stream track.
+\textit{Panel (c)}: Background-subtracted surface-density estimates computed in
+running, overlapping $3^\circ$ windows for both GD-1 data and toy model.
+\textit{Panel (d)}: Median proper motion along the stream longitude computed in
+the same bins as previous panel.
+\textit{Panel (e)}: Same as Panel (d), but for proper motion in stream latitude.
 }
 \label{fig:track-and-model}
 \end{figure}
@@ -332,10 +347,15 @@ extinction map (\citealt{Schlegel:1998}).
 For longitudes $\phi_1 < -60^\circ$, as the stream approaches the Galactic disk,
 dust extinction becomes more appreciable, and the stream stars are harder to
 select apart from the background.
-Second, each star in our sample has at least XX visibility periods, while the sample median and variance are XX and XX, respectively, guaranteeing a robust estimate of proper motions.
-Variations in the number density of faint stars originating from the scanning pattern are XX times smaller than the density variations in the stream, and their spatial distribution does not map to the stream features.
-% The relative ratios between different over- and under-densities might be affected by the \gaia\ completeness at the faint end, but they 
-\todo{check above sentences +  fill in}
+Second, 99\% of the stars in our sample have at least 8 \gaia\ visibility
+periods (median and root-variance of 14 and 3, respectively), guaranteeing a
+robust estimate of proper motions.
+The variance in the number density of faint stars originating from the \gaia\
+scanning pattern is only $\approx 1~\textrm{deg}^{-2}$, as estimated using stars
+with proper motions $-9 < \mu_{\phi_1, \odot} < -4.5~\masyr$ and $1 <
+\mu_{\phi_2, \odot} < 4~\masyr$ (i.e. above the stream selection box), far
+smaller than the density variations in the stream.
+% The relative ratios between different over- and under-densities might be affected by the \gaia\ completeness at the faint end, but they
 
 The density variations likely represent real morphological changes along the
 GD-1 stream, as have been suggested before from binned samples of
@@ -347,23 +367,34 @@ close to $\phi_1 \approx -13^\circ$ with roughly symmetric under-densities on
 either side:
 this is suggestive of a progenitor system in the final stages of dissolution
 (\todo{cite who}).
-% \todo{Table of locations, sizes, and density constrasts for the features?}
+This region is also the thinnest part of the stream, as would be expected for
+recently stripped material that has not yet phase-mixed in multiple dimensions.
+
+We also measured the median proper motion profile along the stream (panels
+(d)--(e)) and find that these are consistent with previously measured mean
+proper motions from SDSS-USNOB (\citealt{Koposov:2010}).
+Here, the proper motion gradient is resolved in striking detail for individual
+stars from \gaia\ (see, e.g., elongated over-density in upper right panel of
+\figurename~\ref{fig:selection}).
 
 We compare the measured stream properties to a simple model for the phase-space
 density of the stream, generated by only simulating the orbital evolution of
 cluster stars once they are tidally stripped from the progenitor.
-In detail, during simulation, star particles are released from the Lagrange
-points of the cluster with a spread in position and velocity set by the mass of
-the satellite and the location within the host galaxy, with some tunable scale
-parameters.
-We use the parametrization and adopted scale parameters of \citet{Fardal:2015},
-who fit the release distribution parameters by comparing to full $N$-body
-simulations across a range of mass and orbital parameters.
-This method can accurately reproduce the mean track of the resulting stream, but
-the density of stars along the stream depends strongly on the mass-loss history
-and internal kinematics of the progenitor system.
-Here we assume a constant mass-loss rate, and release stream particles uniformly
-in time from each Lagrange point; these choices match results from more detailed numerical experiments of globular cluster disruption \citep[e.g.,][]{Kupper:2012}.
+We use the ``particle-spray'' stream generation method (\citealt{Fardal:2015})
+and assume a uniform mass-loss history to generate the model stream, which
+choices matches results from more detailed ($N$-body) numerical experiments of
+globular cluster disruption \citep[e.g.,][]{Kupper:2012}.
+% During simulation, star particles are released from the Lagrange points of the
+% cluster with a spread in position and velocity set by the mass of the
+% satellite and the location within the host galaxy, with some tunable scale
+% parameters (using the parametrization and adopted scale parameters of
+% \cite{Fardal:2015}).  This method can accurately reproduce the mean track of
+% the resulting stream, but the density of stars along the stream depends in
+% detail on the mass-loss history and internal kinematics of the progenitor
+% system.  Here we assume a constant mass-loss rate, and release stream
+% particles uniformly in time from each Lagrange point; these choices match
+% results from more detailed numerical experiments of globular cluster
+% disruption \citep[e.g.,][]{Kupper:2012}.
 
 To compute initial conditions for the stream model, we fit an orbit to the
 observed properties of the stream in a fixed model for the gravitational
@@ -372,17 +403,43 @@ We use a three-component potential model to represent the Galaxy, consisting of
 a disk (\citealt{Miyamoto:1975}), a bulge
 (\citealt{Hernquist:1990}), and a spherical dark matter halo
 (\citealt{Navarro:1996}).
-We set the disk scale-length parameters to closely match the disk model found in
-\citet{Bovy:2015}, and other parameters are set to reproduce an approximately
-flat rotation curve between $5 < R < 15~\kpc$ with a circular velocity at the
-solar circle, $v_{\textrm{circ}, \odot} \approx 230~\kms$.
+We set the disk scale-length parameters to match the disk model found in
+\citet{Bovy:2015}; other parameters are set to produce an approximately flat
+disk rotation curve between with a circular velocity at the solar circle,
+$v_{\textrm{circ}, \odot} \approx 230~\kms$.
+We use L-BFGS-B optimization as implemented in the \package{scipy}
+\texttt{Python} package to maximize the likelihood of the orbit given sky track
+and proper motions from this work with mean distance and giant star radial
+velocities from \cite{Koposov:2010}.
+We do not vary the parameters of the Milky Way model in the fit because we are
+only interested in producing a comparison model of the stream properties.
+
+\figurename~\ref{fig:orbitfit} shows the best-fitting orbit from the procedure
+outlined above.
+The GD-1 stream crosses the midplane at large radius, far from the bulk of the
+stellar density:
+the grey line in the left panel shows the radius that contains $\approx 90\%$ of
+the mass, assuming an exponential radial density profile with a scale radius
+$\R_d = 3~\kpc$ (an intermediate value of recent measurements, e.g.,
+\citealt{Bovy:2012}).
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=\textwidth]{orbitfit.pdf}
 \end{center}
 \caption{%
-\todo{APW}
+Best-fitting orbit in a simple (fixed) model for the gravitational potential of
+the Milky Way using phase-space information along the stream measured from this
+work combined with data from \citet{Koposov:2010}.
+Left panel shows the orbit in Galactocentric cylindrical radius, $R$, and height
+above the Galactic midplane, $z$;
+grey line at $z=0$ shows the approximate radius of the disk.
+Right panel shows the orbit projected onto the midplane in Galactocentric
+cartesian coordinates.
+The darker orbit section highlights the range of stream longitudes over which we
+clearly see GD-1 stream stars in \figurename~\ref{fig:selection}.
+Note that GD-1 is retrograde with respect to the disk (see approximate location
+and direction of motion of the sun in right panel, $\odot$).
 }
 \label{fig:orbitfit}
 \end{figure}
@@ -390,20 +447,19 @@ solar circle, $v_{\textrm{circ}, \odot} \approx 230~\kms$.
 To initialize the model stream generation, we assume that the present day (i.e.
 final) position of the progenitor system is at $\phi_1 = -13.5^\circ$, the peak
 of the observed surface density profile.
-We integrate backwards for $4~\textrm{Gyr}$ using the orbital parameters at this
-location using the Leapfrog integration scheme with a timestep of
-$0.5~\textrm{Myr}$, then begin the model stream generation using the Lagrange
-point stripping method discussed above.
-Stream particles are release at each timestep of the progenitor orbit
-integration, resulting in 16,000 stream particles by the end of the model stream
-generation.
+We numerically integrate the backwards from this location for $4~\textrm{Gyr}$
+then forward-generate the model stream using the method discussed above, and
+release stream particles at each timestep.
 We assume an initial progenitor mass of $M=10^5~\msun$, and linearly decrease
 the mass of the progenitor until present day, where we assume $M = 0~\msun$
 (i.e. fully disrupted).
 Stream properties computed from this resulting model stream are plotted in
-\figurename~\ref{fig:track-and-model} as \todo{XX}.
-
-\figurename~\ref{fig:orbitfit} shows \todo{APW: ...}
+\figurename~\ref{fig:track-and-model} as dashed (orange) lines.
+The model stream qualitatively matches the stream track in all phase-space
+dimensions, but has a much smoother surface density profile along the extent of
+the stream.
+We therefore don't expect that the observed surface density variations could be
+caused by, e.g., epicyclic over-densities (\citealt{Kupper:2012}).
 
 
 \subsection{Off-track features}
@@ -474,11 +530,11 @@ We defer detailed modeling of these features to infer their co-evolution with th
 
 - future:
 -- radial velocities, measure 3d velocity structure (unique predictions)
-- delta energy, 
+- delta energy,
 - cleaner selection (any stars in the gap)
 
 - (should go at least to symmetric in positive), not captured with naive selection, as there are gradients
-- prediction: very negative rv, should be easy to map the full extent 
+- prediction: very negative rv, should be easy to map the full extent
 
 % -- tests for other outstanding issues
 -- model facets of stream morphology to ascertain if consistent with encounter signatures
