@@ -9,6 +9,12 @@
 % - 2 gaps, 1 under-density - epicycles/streakline? percentiles in polynomial
 % - spur - encounter?
 
+% Make the point that if we can measure distance to spur, stream, RVs - measure energy offset which doesn't depend on time, like gap size
+
+% Make sure to include simple equations so can rescale
+
+% Note that epicyclic density variations naturally in, but caveat uniform release times
+
 \documentclass[modern]{aastex62}
 
 \usepackage{amsmath}
@@ -169,7 +175,7 @@ Implications of this revolutionary remapping of GD-1 are discussed in \S\,\ref{s
 % interesting small-scale ``wiggles'' and significant density variations along a $\approx 45^\circ$ span of the stream (\citealt{DeBoer:2018}):
 % [summarize their conclusions].
 % \todo{these analyses relied on binned data, still contaminated by MW stars}
-% 
+%
 % In this \article, we present clearest view of the GD-1 stream to date using
 % astrometric data from the \gaia\ mission data release 2 (\DR) combined with
 % precise photometry from the \pans\ survey.
@@ -202,21 +208,21 @@ a distance given by the linear relationship $d(\phi_1) = (0.05 \, \phi_1 +
 For the solar velocity in a Galactocentric rest frame, we use $\bs{v}_\odot =
 (11.1, 232.24, 7.25)~\kms$ (\citealt{Schonrich:2010, Bovy:2015}).
 \figurename~\ref{fig:selection} (top right) shows the distribution of stars with
-$|\phi_2| < XX^\circ$ in solar-reflex-corrected proper motion components in the
+$|\phi_2| < 1^\circ$ in solar-reflex-corrected proper motion components in the
 GD-1 coordinate system, $\mu_{\phi_1, \odot}$ (which includes the $\cos{\phi_2}$
 term) and $\mu_{\phi_2, \odot}$.
 GD-1 member stars are visible as the over-density around
 $(\mu_{\phi_1, \odot}, \mu_{\phi_2, \odot}) \approx (-8, 0)~\masyr$.
 
 As a first selection of GD-1 candidate member stars, we select stars with proper
-motions $XX < \mu_{\phi_1, \odot} < XX~\masyr$ and $XX < \mu_{\phi_2, \odot} <
-XX~\masyr$, as visualized by the rectangle in the top right panel of
+motions $-9 < \mu_{\phi_1, \odot} < -4.5~\masyr$ and $-1.7 < \mu_{\phi_2, \odot}
+< 1~\masyr$, as visualized by the rectangle in the top right panel of
 \figurename~\ref{fig:selection}.
 \figurename~\ref{fig:selection} (top left) shows all stars the pass the
 selection on proper motion, plotted in the GD-1 coordinate system.
 From kinematic selection alone, the stream is identifiable as the over-density
-of stars around $\phi_2 = 0$ between longitudes $XX^\circ \lesssim \phi_1
-\lesssim XX^\circ$.
+of stars around $\phi_2 = 0$ between longitudes $-60^\circ \lesssim \phi_1
+\lesssim 0^\circ$.
 
 \begin{figure}[h]
 \begin{center}
@@ -232,12 +238,12 @@ To improve the contrast of the stream over the background, we cross-match the
 sample to the \pans\ photometric catalog and use the photometry to further clean
 the sample.
 \figurename~\ref{fig:selection} (bottom right) shows the distribution of
-proper-motion-selected candidate stream stars in a de-reddened \pans\
-color-magnitude diagram (CMD).
-\todo{AB: Did you also cut on $phi_2$?}.
+proper-motion-selected candidate stream stars within $\left|\phi_2\right| <
+1^\circ$ in a de-reddened \pans\ color-magnitude diagram (CMD).
 The over-plotted isochrone (red line) is from the MESA Isochrones \& Stellar
 Tracks (MIST; \citealt{Dotter:2016, Choi:2016, Paxton:2011}) and represents a
-$12~\textrm{Gyr}$ old population with $\feh = -1.XX$ at a distance of $XX~\kpc$.
+$12~\textrm{Gyr}$ old population with $\feh = -1.35$ at a distance of
+$7.8~\kpc$.
 We use this isochrone to motivate a polygonal selection in de-reddened $g-i$
 color and apparent $g$-band magnitude, as visualized by the shaded region in the
 bottom right panel of \figurename~\ref{fig:selection}.
@@ -271,64 +277,58 @@ stream, and find interesting substructures off of the main stream track.
 \subsection{Global properties}
 \label{sec:res_global}
 
-To study of global properties of the stream as a function of stream longitude,
+To study the global properties of the stream as a function of stream longitude,
 we extract stream stars around a low-order polynomial model for the median
 stream latitude, $\phi_2$, as a function of stream longitude, $\phi_1$.
 In detail, we find stream ridge points by computing a running median in $\phi_2$
-in steps of $XX^\circ$ along $\phi_1$, then fit a second-order polynomial to the
-ridge points to find $\phi_{2, \textrm{track}}(\phi_1)$.
+in steps of $2^\circ$ with a window size of $4^\circ$ along $\phi_1$, then fit a
+second-order polynomial to the ridge points to find $\phi_{2,
+\textrm{track}}(\phi_1)$.
 We define the stream as the region within $\left| \phi_2 - \phi_{2,
-\textrm{track}}(\phi_1) \right| < 0.6^\circ$.
-\figurename~\ref{fig:XX} (XX panel) again shows the high-confidence
-stream stars, and the two curved lines (blue) show the upper and lower boundary
-of the stream region.
+\textrm{track}}(\phi_1) \right| < 0.75^\circ$.
+\figurename~\ref{fig:track-and-model} (top panel) again shows the
+high-confidence stream stars, and the two curved lines (blue) show the adopted
+upper and lower boundary of the stream region.
 
-\begin{figure}[h]
-\begin{center}
-% \includegraphics[width=\textwidth]{???.pdf}
-\end{center}
-\caption{%
-\todo{???}
-\label{fig:XX}
-}
-\end{figure}
+We extract properties of the stream from the region defined above as a function
+of $\phi_1$ by computing stream properties in overlapping windows:
+we set the window size to $4^\circ$ in $\phi_1$, and shift the window center by
+$1^\circ$ in longitude for each measurement.
+\figurename~\ref{fig:track-and-model} shows the median latitude, $\phi_2$,
+stream surface density, $XX$, stream width, $XX$, and median proper motions,
+$\mu_{\phi_1}$ and $\mu_{\phi_2}$, extracted in this way, and empirical scatters
+for each estimated from each window (blue lines and shaded regions).
+For the surface density estimate, we subtract an estimate of the background
+surface density computed from the area outside of the bounded stream region.
 
-The clearly identifiable portions of the GD-1 stream are located at high
-Galactic latitudes ($b > 20^\circ$), and we therefore do not expect significant
-dust extinction or variations in extinction within the stream region.
-\figurename~\ref{fig:XX} (XX panel) shows the $V$-band extinction
-in the region around the GD-1 stream, computed from the
-Schlegel-Finkbeiner-Davis extinction map (\cite{Schlegel:1998}; hereafter SFD).
+Clear density variations, also apparent in the 2D positions of the sources,
+manifest as sharp features in the surface density estimates along the stream;
+these are not a result of variable dust extinction or completeness variations
+from the \gaia\ scanning pattern.
+First, the visible portions of the GD-1 stream are located at high Galactic
+latitudes ($b > 20^\circ$), and we therefore do not expect significant dust
+extinction or variations in extinction within the stream region.
 For stream longitudes $-60^\circ < \phi_1 < 10^\circ$ and $-1^\circ < \phi_2 <
 1^\circ$, the median $V$-band extinction is $\textrm{med}\left(A_V\right) =
 0.04~\textrm{mag}$, and the dispersion in $A_V$ in this region is $\sigma_{A_V}
-\approx 0.03~\textrm{mag}$.
+\approx 0.03~\textrm{mag}$, as computed from the Schlegel-Finkbeiner-Davis
+extinction map (\citealt{Schlegel:1998}).
 For longitudes $\phi_1 < -60^\circ$, as the stream approaches the Galactic disk,
 dust extinction becomes more appreciable, and the stream stars are harder to
 select apart from the background.
+Second, \todo{what to say about the Gaia scanning law...}
 
-We extract properties of the stream from the region defined above as a function
-of $\phi_1$ by computing properties in overlapping windows:
-we set the window size to $XX^\circ$ in $\phi_1$, and shift the window center by
-$1^\circ$ along the stream region.
-\figurename~\ref{fig:track-and-model} shows the median latitude, $\phi_2$,
-stream surface density, $XX$, stream width, $XX$, and median proper motions,
-$\mu_{\phi_1}$ and $\mu_{\phi_2}$, extracted in this way.
-For the surface density, we subtract an estimate of the background surface
-density by \todo{AB}.
-To estimate the stream width, $w$, we compute the median absolute deviation,
-$\textrm{MAD}$, and use this to estimate a robust standard deviation, $w = 1.5
-\times \textrm{MAD}$.
-
-\todo{Comment on density variations, stream width variations. Do we want a
-$\Delta \phi_2$ plot (relative to mean stream track) with 15th/85th
-percentiles?}
-
-- first measure density variations in background subtracted profile
-- find maximum -- morphology as expected from a progenitor in the final stages of dissolution (cit)
-- several prominent gaps: density contrast, width
-- some (all?) seen in earlier data
-- but not related to dust
+The density variations likely represent real morphological changes along the
+GD-1 stream, as have been suggested before from binned samples of
+color-magnitude-selected GD-1 stars (\citealt{Carlberg:2013, DeBoer:2018}).
+The deep under-densities we see from the kinematically-cleaned sample correspond
+to previously reported gaps in the stream.
+There is also a well-defined, sharp over-density in the surface density profile
+close to $\phi_1 \approx -13^\circ$ with roughly symmetric under-densities on
+either side:
+this is suggestive of a progenitor system in the final stages of dissolution
+(\todo{cite who}).
+\todo{Table of locations, sizes, and density constrasts for the features?}
 
 We compare the measured stream properties to a simple model for the phase-space
 density of the stream, generated by only simulating the orbital evolution of
@@ -359,7 +359,8 @@ flat rotation curve between $5 < R < 15~\kpc$ with a circular velocity at the
 solar circle, $v_{\textrm{circ}, \odot} \approx 230~\kms$.
 
 To initialize the model stream generation, we assume that the present day (i.e.
-final) position of the progenitor system is at $\phi_1 = XX^\circ$.
+final) position of the progenitor system is at $\phi_1 = -13.5^\circ$, the peak
+of the observed surface density profile.
 We integrate backwards for $4~\textrm{Gyr}$ using the orbital parameters at this
 location using the Leapfrog integration scheme with a timestep of
 $0.5~\textrm{Myr}$, then begin the model stream generation using the Lagrange
@@ -484,9 +485,13 @@ All code used in this work and all results are available at
 
 \clearpage
 
-\appendix
-\section{Completeness and the \gaia\ scanning pattern}
-\label{sec:completeness}
+% \appendix
+% \section{Completeness and the \gaia\ scanning pattern}
+% \label{sec:completeness}
+
+% \figurename~\ref{fig:XX} (XX panel) shows the $V$-band extinction
+% in the region around the GD-1 stream, computed from the
+% Schlegel-Finkbeiner-Davis extinction map (\cite{Schlegel:1998}; hereafter SFD).
 
 % % Notebook:
 % \begin{figure}[h]
