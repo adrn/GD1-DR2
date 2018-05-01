@@ -60,16 +60,21 @@
 \affil{Harvard--Smithsonian Center for Astrophysics, Cambridge, MA 02138, USA}
 
 \begin{abstract}\noindent % trust me
+Tidally-disrupted globular clusters are transformed into thin, dynamically-cold
+streams of stars that are extremely valuable tracers of the large- and
+small-scale distribution of mass in the Galaxy.
 Using the exquisite data from the \gaia\ second data release combined with
-\pans\ photometry,  we present a sample of highly-probable members of the
+\pans\ photometry, we present a sample of highly-probable members of the
 longest cold stream in the Milky Way -- GD-1.
 The resulting map of GD-1: (1) extends the apparent length of the stream by
 $20^\circ$, (2) reveals a plausible location for the progenitor, (3) detects 
 significant density variations along the stream, and (4) indicates
 the existence of stream members off the main stream track.
-% Tidally-disrupted globular clusters are transformed into thin, dynamically-cold
-% streams of stars that are extremely valuable tracers of the large- and
-% small-scale distribution of mass in the Galaxy.
+The additional length and proper treatment of the progenitor will aid in dynamical modeling of GD-1 and map the Galaxy on large scales, while its complex morphology points to a turbulent history, potentially informing on massive, small-scale perturbers within 30\,kpc.
+
+
+
+
 % Most stellar streams discovered around the Milky Way reside in the Galactic halo
 % and are therefore primarily sensitive to the dark matter distribution.
 % The longest and most prominent thin stream in the Milky Way --- the GD-1 stream --- has been used
@@ -157,11 +162,12 @@ matter properties in the inner Milky Way.
 Both from fitting orbits to binned phase-space measurements along the GD-1
 stream (\citealt{Koposov:2010}) and from modeling the stream track in
 phase-space coordinates \citep{Bowden:2015, Bovy:2016}, it appears that the dark
-matter distribution within $\approx20\,\rm kpc$ is close to spherical.
-This is consistent with findings from simulated Milky Way-like galaxies:
-simulated dark-matter-only halos tend to be triaxial \citep{Allgood:2006}, but
-baryonic processes tend to make their inner regions more spherical
-\citep{Zhu:2016}.
+matter distribution within $\approx20\,\rm kpc$ is close to spherical, consistent 
+with findings from simulated Milky Way-like galaxies \citep{Zhu:2016}.
+% This is consistent with findings from simulated Milky Way-like galaxies:
+% simulated dark-matter-only halos tend to be triaxial \citep{Allgood:2006}, but
+% baryonic processes tend to make their inner regions more spherical
+% \citep{Zhu:2016}.
 
 Its implied old dynamical age, combined with its orbital properties, makes GD-1
 a prime stream to also study the small scale structure of dark matter.
@@ -173,17 +179,18 @@ Galactic bar.
 Therefore, observed density variations in the GD-1 stream could instead be an
 indication of past interactions with dark matter subhalos
 \citep[e.g.,][]{Ngan:2014}.
-By estimating a stream age of $\approx 4~\textrm{Gyr}$, assuming a progenitor
-mass of $10^5~\msun$, and by assuming properties of the subhalo population from
-% dark matter-only simulations \citep[scaled to the Milky Way halo mass and
-% reduced in number by a factor of 3 to account for disruption by the Galactic
-% disk]{Springel:2008, Diemand:2008}, \citet{Erkal:2016} predict that GD-1 could
-dark matter-only simulations \citep{Springel:2008, Diemand:2008},
-\citet{Erkal:2016} predict that GD-1 could have up to one significant, wide
+% By estimating a stream age of $\approx 4~\textrm{Gyr}$, assuming a progenitor
+% mass of $10^5~\msun$, and by assuming properties of the subhalo population from
+% dark matter-only simulations \citep{Springel:2008, Diemand:2008},
+\citet{Erkal:2016} predict that a 4\,Gyr old GD-1-like stream in a Milky Way-like galaxy
+could have up to one significant, wide
 ($\approx 5$--$7^\circ$) gap caused by an interaction with a
 $10^6$--$10^7~\msun$ subhalo.
 A definitive ruling on the presence of dark matter subhalos in this mass regime
 would directly inform the nature of dark matter \citep[e.g.,][]{Bullock:2017}.
+% dark matter-only simulations \citep[scaled to the Milky Way halo mass and
+% reduced in number by a factor of 3 to account for disruption by the Galactic
+% disk]{Springel:2008, Diemand:2008}, \citet{Erkal:2016} predict that GD-1 could
 
 Photometric studies of GD-1 revealed the presence of density variations and gaps
 along the stream, as well as wiggles in the main stream track
@@ -224,11 +231,12 @@ high-confidence members of the GD-1 stream.
 
 We retrieve \gaia\ data along the previously-identified track of the GD-1 stream
 from the \gaia\ science archive\footnote{\url{https://gea.esac.esa.int/}} by
-selecting sources with small parallax, $\varpi < 1~\textrm{mas}$, and select
-batches of stars that have small latitude in the heliocentric GD-1 coordinate
-system, $(\phi_1, \phi_2)$, defined in \cite{Koposov:2010}.
+selecting sources with small parallax, $\varpi < 1~\textrm{mas}$ in fields along the GD-1 stream
+% , and select
+% batches of stars that have small latitude in the heliocentric GD-1 coordinate
+% system, $(\phi_1, \phi_2)$, defined in \cite{Koposov:2010}.
 We convert the equatorial sky coordinates and proper motions %of the parallax-selected stars
-to the GD-1 stream system, and correct the proper motions for solar reflex
+to the GD-1 coordinate system \citep[$\phi_1, \phi_2$,][]{Koposov:2010}, and correct the proper motions for solar reflex
 motion by assuming that stars at a given stream longitude, $\phi_1$, have a
 distance given by $d(\phi_1) = (0.05 \, \phi_1 + 10)~\textrm{kpc}$;
 we assume a solar velocity $\bs{v}_\odot = (11.1, 232.24, 7.25)~\kms$
@@ -239,10 +247,10 @@ $\mu_{\phi_1, \odot}$ and $\mu_{\phi_2, \odot}$.
 GD-1 members are visible as the overdensity around $(\mu_{\phi_1, \odot},
 \mu_{\phi_2, \odot}) \approx (-8, 0)~\masyr$.
 
-As a first selection of GD-1 member stars, we select stars with proper motions
+As a first selection of GD-1 member stars, we choose stars with proper motions
 $-9 < \mu_{\phi_1, \odot} < -4.5~\masyr$ and $-1.7 < \mu_{\phi_2, \odot} <
-1~\masyr$, as visualized by the rectangle in the top right panel of
-\figurename~\ref{fig:selection}.
+1~\masyr$ (rectangle in the top right panel of
+\figurename~\ref{fig:selection}).
 \figurename~\ref{fig:selection} (top left) shows all stars that pass the
 selection, plotted in the GD-1 coordinate system.
 The stream is already identifiable as the overdensity of stars around $\phi_2 =
@@ -272,7 +280,7 @@ sample to the \pans\ photometric catalog. % and use the photometry to clean the 
 \figurename~\ref{fig:selection} (bottom right) shows the proper-motion-selected
 candidate stream stars within $\left|\phi_2\right| < 1^\circ$ in a \pans\
 color-magnitude diagram (CMD) de-reddened following \citet{Schlafly:2011}.
-GD-1 stellar population stands out from the Milky Way foreground, and is well matched by a 12\,Gyr, $\feh = -1.35$ MIST isochrone at a distance of $7.8\,\kpc$ \citep[red line in Figure~\ref{fig:selection}][]{Dotter:2016, Choi:2016, Paxton:2011}. 
+GD-1 stellar population stands out from the Milky Way foreground, and is well matched by a 12\,Gyr, $\feh = -1.35$ MIST isochrone at a distance of $7.8\,\kpc$ \citep[red line in Figure~\ref{fig:selection},][]{Dotter:2016, Choi:2016, Paxton:2011}. 
 % The over-plotted isochrone (red line) is from the MESA Isochrones \& Stellar
 % Tracks (MIST; \citealt{Dotter:2016, Choi:2016, Paxton:2011}) and represents a
 % $12~\textrm{Gyr}$ old population with $\feh = -1.35$ at a distance of
@@ -450,13 +458,14 @@ motion of the sun are indicated in the right panel, $\odot$).
 \end{figure}
 
 To compute initial conditions for the stream model, we fit an orbit to the
-observed properties of the stream in a fixed Milky Way model consisting of a
-disk (\citealt{Miyamoto:1975}), a bulge (\citealt{Hernquist:1990}), and a
-spherical dark matter halo (\citealt{Navarro:1996}).
-We set the disk scale-length parameters to match the disk model found in
-\citet{Bovy:2015}; other parameters are set to produce an approximately flat
-disk rotation curve with a circular velocity at the solar circle,
-$v_{\textrm{circ}, \odot} \approx 230~\kms$.
+observed properties of the stream in a fixed Milky Way model similar to \citet{Bovy:2015}.
+% consisting of a
+% disk (\citealt{Miyamoto:1975}), a bulge (\citealt{Hernquist:1990}), and a
+% spherical dark matter halo (\citealt{Navarro:1996}).
+% We set the disk scale-length parameters to match the disk model found in
+% \citet{Bovy:2015}; other parameters are set to produce an approximately flat
+% disk rotation curve with a circular velocity at the solar circle,
+% $v_{\textrm{circ}, \odot} \approx 230~\kms$.
 %use L-BFGS-B optimization as implemented in the \package{scipy}
 % \texttt{Python} package to
 We maximize the likelihood of the orbit given sky track and proper motions from
@@ -504,7 +513,7 @@ by, e.g., epicyclic overdensities (\citealt{Kupper:2012}).
 \caption{
 Color-magnitude and proper-motion diagrams of fields associated with a spur above GD-1 (top), and fields related to the blob below GD-1 (bottom).
 The top and bottom left panels show properties in stream fields (darkest rectangles in middle panel), both middle panels present spur and blob (medium rectangles), while the right-most top and bottom panels are selected opposite from spur and blob (lightest rectangles).
-Spatial selection boxes are shown in the middle panel as rectangles, and in all CMD and proper-motion panels as shaded regions.
+Selection boxes are shown in all CMD and proper-motion panels as shaded regions.
 Both the spur and the blob fields have more stars in the CMD selection box than the corresponding control fields.
 Proper motions of these stars follow the distribution of stars in adjacent stream fields, thus confirming the association of these off-track features with GD-1.
 }
