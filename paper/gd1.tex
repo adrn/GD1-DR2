@@ -4,17 +4,6 @@
 % TODO:
 % - Reference for the dustmaps package? See software section.
 
-% Story:
-% - progenitor - show std_v, std_phi2
-% - 2 gaps, 1 under-density - epicycles/streakline? percentiles in polynomial
-% - spur - encounter?
-
-% Make the point that if we can measure distance to spur, stream, RVs - measure energy offset which doesn't depend on time, like gap size
-
-% Make sure to include simple equations so can rescale
-
-% Note that epicyclic density variations naturally in, but caveat uniform release times
-
 \documentclass[modern]{aastex62}
 
 \usepackage{amsmath}
@@ -411,7 +400,7 @@ There is also a well-defined, sharp overdensity in the surface density profile
 close to $\phi_1 \approx -13^\circ$ with roughly symmetric under-densities on
 either side:
 this is suggestive of a progenitor system in the final stages of dissolution
-(\todo{cite who}).
+(\citealt{Balbinot:2018}).
 This region is also the thinnest part of the stream, as would be expected for
 recently stripped material.
 % that has not yet phase-mixed in multiple dimensions.
@@ -501,10 +490,13 @@ caused by, e.g., epicyclic overdensities (\citealt{Kupper:2012}).
 
 \subsection{Off-track features}
 \label{sec:res_gap}
-In this section we test whether the overdensities apparent beyond the main stream track (Figure~\ref{fig:selection}) are truly associated with the GD-1 stream.
+
+Here we test whether the overdensities apparent beyond the main stream track
+(\figurename~\ref{fig:selection}) are truly associated with the GD-1 stream by
+comparing color-magnitude diagrams and proper motions of the spur and blob
+fields to the stream and background fields.
 % this would be a novel insight into disruption from the \gaia\ mission
-Some contamination still remains present in our selection, so it is possible that these features are due to the Milky Way population randomly over-populating our selection boxes.
-We compare color-magnitude diagrams and proper motions of the spur and blob fields to the stream and background fields.
+% Some contamination still remains present in our selection, so it is possible that these features are due to the Milky Way population randomly over-populating our selection boxes.
 
 \begin{figure}
 \begin{center}
@@ -512,8 +504,8 @@ We compare color-magnitude diagrams and proper motions of the spur and blob fiel
 \end{center}
 \caption{
 Color-magnitude and proper-motion diagrams of fields associated with a spur above GD-1 (top), and fields related to the blob below GD-1 (bottom).
-The left-most pair of panels show properties in stream fields (darkest rectangles in the middle panel), the middle pairs present spur and blob (medium rectangles), while the right-most panels have fields on the opposite side from spur and blob (lightest rectangles).
-Selection boxes used to select stars shown in the middle panel are shown in orange in all CMD and proper-motion panels.
+The top and bottom left panels show properties in stream fields (darkest rectangles in middle panel), both middle panels present spur and blob (medium rectangles), while the right-most top and bottom panels are selected opposite from spur and blob (lightest rectangles).
+Spatial selection boxes are shown in the middle panel as rectangles, and in all CMD and proper-motion panels as shaded regions.
 Both the spur and the blob fields have more stars in the CMD selection box than the corresponding control fields.
 Proper motions of these stars follow the distribution of stars in adjacent stream fields, thus confirming the association of these off-track features with GD-1.
 }
@@ -524,41 +516,60 @@ The central panel of \figurename~\ref{fig:features} shows the map of GD-1, with 
 In both cases, we analyze the stream region (darkest shade), overdensity off from the stream (medium shade) and use a field on the opposite side of the stream from the overdensity as a control (lightest shade).
 The $\phi_1$ range is the same for all three fields associated with a given feature, and the control and feature field have the same area, while the stream field is smaller to avoid cross-contamination.
 
-For each of the examined fields, we present the color-magnitude diagram of stars selected on proper motions (left) and proper motions of photometrically selected stars (right), with spur fields on the top and blob fields on the bottom of Figure~\ref{fig:features}.
+For each of the examined fields, we present the color-magnitude diagram of stars selected on proper motions (left subpanels) and proper motions of photometrically selected stars (right subpanels), with spur fields on the top and blob fields on the bottom of \figurename~\ref{fig:features}.
 % In both rows, arranged from left to right are the stream, the feature, and the control field.
-Stars selected from the stream fields show a clear overdensity in the CMD selection box and cluster in proper motions.
-The two stream fields have a clear relative offset in proper motions, as expected from the velocity gradients shown in Figure~\ref{fig:track-and-model}.
+Stars selected from the stream fields show a clear overdensity in the CMD selection box and are clustered in proper motions.
+The two stream fields have a clear relative offset in proper motions, as expected from the velocity gradients shown in \figurename~\ref{fig:track-and-model}.
 Furthermore, the main-sequence turn-off of the $\phi_1\sim-15^\circ$ field appears to be fainter than the $\phi_1\sim-35^\circ$, consistent with the distance gradient across the stream measured by \citet{Koposov:2010}.
+
 On the other hand, the control fields have some stars entering both the CMD and proper-motion selection boxes, but without any significant overdensities in either.
 CMDs of the spur and blob fields have more stars in the selection box than their respective control fields, and the distribution within the box is qualitatively similar to that of the corresponding stream field, suggesting a similar distance.
 In proper motions, the spur and blob fields also display properties similar to the adjacent stream fields, with clear overdensities of stars in the selection box.
 
 Stars from the spur and the blob are similar to those along the main stream track in the color-magnitude diagram and in proper motions, which confirms their association to GD-1.
-The proximity of these off-stream features to large gaps in the stream is suggestive of the gaps being the origin site, further implied by hints of relative velocity differences; for example the median proper motion of the blob is offset from the adjacent stream field by $\approx0.3$\,mas\,yr$^{-1}$ in the positive $\mu_{\phi_1}$ direction.
+The proximity of these off-stream features to large gaps in the stream is suggestive of the gaps being their origin, further implied by hints of relative velocity differences.
+For example, the median proper motion of the blob is offset from the adjacent stream field by $\approx0.3$\,mas\,yr$^{-1}$ in the positive $\mu_{\phi_1}$ direction.
 We defer detailed modeling of these features to infer their co-evolution with the stream for a future study.
 
 
 \section{Discussion}
 \label{sec:discussion}
 
-In this work we mapped a cold stellar stream in individual tracers for the first time by combining precise \pans\ photometry with the revolutionary \gaia\ data set.
-\gaia\ proper motions were especially helpful for selecting members of the retrograde GD-1 stream, and this success signals a novel way to find members of other structures in the Galactic halo.
-In the rest of this section we discuss how the first view of GD-1 in the \gaia\ era is already transforming what we expect to learn about the Galaxy from streams in general, and GD-1 in particular.
+In this work, we map a cold stellar stream in individual stars by combining precise \pans\ photometry with the revolutionary \gaia\ astrometry.
+The \gaia\ proper motions were critical for selecting members of the retrograde GD-1 stream, and this success signals a novel way to find members of other structures in the Galactic halo.
+In what follows, we discuss how this first view of GD-1 in the \gaia\ era is already transforming what we expect to learn about the Galaxy from streams in general, and GD-1 in particular.
 
-The absence of its progenitor has been a long-standing hurdle in dynamical modeling of GD-1, mostly due to the unknown true extent of the stream.
+First, the absence of a clear progenitor has been a long-standing hurdle in dynamical modeling of GD-1, mostly due to the unknown true extent of the stream.
 Confirming the progenitor location suggested here, $(\phi_1, \phi_2) = (-13.5^\circ,-0.5^\circ)$, for example by measuring the (canonical) angle variations along the stream \citep{Bovy:2014}, would motivate further searches for stream members along the trailing arm (positive $\phi_1$) to symmetrically match the extent of the leading arm.
 The stream length is directly proportional to the information it provides on the underlying gravitational potential \citep{Bonaca:2018}, making GD-1 a top modeling priority to map the inner 30\,kpc of the Galaxy, even at the length of $\sim90^\circ$ inferred in this work.
 Properly accounting for the progenitor would also unleash the full constraining power of detailed density structure within the tails, as advocated by \citet{Kupper:2015}.
 
-GD-1 seen by \gaia\ is no longer a simple, one-dimensional structure.
-Not only are the density variations, tentatively deduced in previous studies, confirmed as highly significant, but for the first time we have mapped tidal debris from a globular cluster beyond a thin stellar track: parts of GD-1 are at a distance of up to $\sim1^\circ$ from the main track.
-Separation of a part of a stellar stream from the main track could be caused by the different exit velocity from the cluster, but explaining the amount of separation and velocity offset in GD-1 would require the progenitor to rotate at XX km\,s$^{-1}$, much faster than measured for the known clusters (cit).
-Features off from the cold part of the stream are likely too small to be caused by chaotic dispersal from either triaxial matter distribution (cit apw) or the time-dependent influence of the rotating bar (cit pearson).
-However, encounters with a massive perturber are expected to open gaps in streams (cits), so we might be seeing the expelled material in the process of phase mixing away from the stream track.
-The encounter origin would be especially exciting -- since GD-1 resides in the halo, the only objects massive enough likely to cross its path are the long-searched-after dark-matter subhalos.
+Next, GD-1 is no longer a simple, one-dimensional structure (see also \citealt{DeBoer:2018}).
+Not only are the density variations (gaps) confirmed as highly significant, but for the first time we have mapped tidal debris from a globular cluster beyond the thin stellar track: stars from the GD-1 stream have been found up to $\sim1^\circ$ away from the main stream track.
+One explanation for this separated debris could be from velocity substructure within the cluster, but would likely require a fine-tuned orientation to simultaneously explain the sharpness of the neighboring gaps.
+% explaining the amount of separation and velocity offset in GD-1 would require the progenitor to rotate at $\gtrsim 10~\kms$, faster than the measured rotation velocity for any known Milky Way cluster (\citealt{}).
+% APW note: The more I thought about this, I wasn't sure we could make a very strong claim without running or pointing to some stream simulations with rotating progenitors...
+These features are also likely too localized to be explained by chaotic
+dispersal from either triaxialilty (\citealt{Price-Whelan:2016}) or the
+time-dependent influence of the rotating bar (\citealt{Pearson:2017}).
 
-Finding the origin of gaps and off-track features in GD-1 will require progress on two fronts: theoretically, we need to understand the co-evolution of the complex stream system under different origin scenarios, while observing radial velocities of candidate GD-1 members would facilitate data interpretation by remove the remaining contamination and enabling studies in the space of conserved quantities.
--- sentence on getting more from off-track than gaps alone, but somehow more general and not tied specifically to the encounter scenario / or some other nice parting thought
+Encounters between a massive perturber and a thin stream are expected to open gaps in the observed density, and can expel debris into unusual locations and morphologies (e.g., \citealt{Yoon:2011}, see especially \figurename~9).
+The encounter origin would be especially exciting: since GD-1 resides in the halo, the only objects massive enough to cross its path are the long-sought-after dark-matter subhalos.
+
+Confirming the origin of gaps and the off-track features in GD-1 will require
+both detailed modeling of the stream formation in the presence of massive
+perturbers and follow-up radial velocity measurements of candidate GD-1 members.
+Radial velocities will help remove the remaining contamination, further
+improving the contrast of the stream, and will enable measurements of energy and
+angular momentum along the stream and off-track features.
+While constraints on subhalo interactions from individual gaps leave serious
+degeneracies between, e.g., the time of the encounter and the mass of the
+perturber, energy offsets are time-independent and are a promising avenue
+towards placing stronger constraints on the nature of the stream and, if
+confirmed, the particular pertuber.
+
+% theoretically, we need to understand the co-evolution of the complex stream system under different origin scenarios, while observing radial velocities of candidate GD-1 members would facilitate data interpretation by remove the remaining contamination and enabling studies in the space of conserved quantities.
+% -- sentence on getting more from off-track than gaps alone, but somehow more general and not tied specifically to the encounter scenario / or some other nice parting thought
 
 % -- radial velocities, measure 3d velocity structure (unique predictions)
 % - if from encounter -- could get more info on the perturber than from the gaps alone, say from delta v -> delta energy
@@ -581,6 +592,7 @@ Finding the origin of gaps and off-track features in GD-1 will require progress 
 
 \acknowledgements{
 It is a pleasure to thank
+Lauren Anderson,
 Vasily Belokurov,
 Andrew R. Casey,
 Marla Geha,
@@ -590,7 +602,7 @@ Kathryn V. Johnston,
 Sergey Koposov,
 Mariangela Lisanti,
 Edward Schlafly,
-and David N. Spergel for useful discussions and feedback.
+and David N. Spergel. % for useful discussions and feedback.
 
 This work has made use of data from the European Space Agency (ESA) mission {\it
 Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the {\it Gaia} Data
@@ -603,8 +615,8 @@ Astrophysics of the Flatiron Institute in 2018 April.
 
 AB acknowledges generous support from the Institute for Theory and Computation
 at Harvard University.
-All code used in this work and all results are available at
-\url{https://github.com/adrn/GD1-DR2}.
+% All code used in this work and all results are available at
+% \url{https://github.com/adrn/GD1-DR2}.
 }
 
 \software{
