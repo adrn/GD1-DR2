@@ -70,10 +70,10 @@ The resulting map of GD-1: (1) extends the apparent length of the stream by
 $20^\circ$, (2) reveals a plausible location for the progenitor, (3) detects
 high-contrast gaps along the stream, and (4) indicates
 the existence of stream members perturbed off the main stream track.
-These discoveries were only possible because of the exquisite proper motions
-from \gaia, which permit a clean separation of the stream from the Milky Way
+These discoveries are only possible because of the exquisite astrometry
+from \gaia, which permits a clean separation of the stream from Milky Way
 stars.
-The additional length and proper treatment of the progenitor will aid in dynamical modeling of GD-1 and map the Galaxy on large scales.
+The additional length and a proper treatment of the progenitor will aid in dynamical modeling of GD-1 for mapping the large-scale dark matter distribution.
 The complex morphology of the stream points to a turbulent history; detailed phase-space properties of the perturbed stream members could potentially constrain dark matter substructure in the Milky Way.
 
 
@@ -231,7 +231,7 @@ release 2 (\citealt{Gaia-Collaboration:2018, Lindegren:2018}), and photometry
 from the \pans\ survey, data release 1 (\citealt{Chambers:2016}) to select
 high-confidence members of the GD-1 stream.
 
-We retrieve \gaia\ data along the previously-identified track of the GD-1 stream
+We retrieve data along the previously-identified track of the GD-1 stream
 from the \gaia\ science archive\footnote{\url{https://gea.esac.esa.int/}} by
 selecting sources with small parallax, $\varpi < 1~\textrm{mas}$ in fields along the GD-1 stream
 % , and select
@@ -282,7 +282,7 @@ sample to the \pans\ photometric catalog. % and use the photometry to clean the 
 \figurename~\ref{fig:selection} (bottom right) shows the proper-motion-selected
 candidate stream stars within $\left|\phi_2\right| < 1^\circ$ in a \pans\
 color-magnitude diagram (CMD) de-reddened following \citet{Schlafly:2011}.
-GD-1 stellar population stands out from the Milky Way foreground, and is well matched by a 12\,Gyr, $\feh = -1.35$ MIST isochrone at a distance of $7.8\,\kpc$ \citep[red line in Figure~\ref{fig:selection},][]{Dotter:2016, Choi:2016, Paxton:2011}.
+The GD-1 stellar population stands out from the Milky Way foreground, and is well matched by a 12\,Gyr, $\feh = -1.35$ MIST isochrone at a distance of $7.8\,\kpc$ \citep[red line in \figurename~\ref{fig:selection},][]{Dotter:2016, Choi:2016, Paxton:2011}.
 % The over-plotted isochrone (red line) is from the MESA Isochrones \& Stellar
 % Tracks (MIST; \citealt{Dotter:2016, Choi:2016, Paxton:2011}) and represents a
 % $12~\textrm{Gyr}$ old population with $\feh = -1.35$ at a distance of
@@ -381,9 +381,11 @@ bins as previous panel.
 
 Clear density variations, also apparent in the 2D positions of the sources,
 manifest as sharp features in the surface density estimates along the stream.
-These do not map to features in dust extinction nor are they caused by completeness variations
-in the \gaia\ scanning pattern, as 99\% of our sample has at least 8 \gaia\ visibility periods,
-promising a robust estimate of the proper motions.
+We have verified that these do not map to features in dust extinction nor are
+they caused by completeness variations in the \gaia\ scanning pattern:
+the visible portions of the GD-1 stream are located at high Galactic latitudes
+($b > 20^\circ$), and 99\% of our sample has at least 8 \gaia\ visibility
+periods, promising a robust astrometric solution.
 % First, the visible portions of the GD-1 stream are located at high Galactic
 % latitudes ($b > 20^\circ$).
 %, and we therefore do not expect significant dust
@@ -416,7 +418,7 @@ either side:
 this is suggestive of a progenitor system in the final stages of dissolution
 (\citealt{Balbinot:2018}).
 This region is also the thinnest part of the stream, as would be expected for
-recently stripped material, but we defer a robust analysis of variations in the
+recently stripped material; we defer a robust analysis of variations in the
 stream width to future work.
 % that has not yet phase-mixed in multiple dimensions.
 
@@ -490,8 +492,8 @@ the mass, assuming a \citet{Bovy:2012} model of the stellar disk.
 To initialize the model stream generation, we assume that the present day
 position of the progenitor system is at $\phi_1 = -13.5^\circ$, the peak of the
 observed surface density profile.
-We numerically integrate the backwards from this location for $4~\textrm{Gyr}$,
-then forward-generate the model stream, and release stream particles at each
+We numerically integrate backwards from this location for $4~\textrm{Gyr}$,
+then forward-generate the model stream, releasing stream particles at each
 timestep.
 We assume an initial progenitor mass of $M=10^5~\msun$, and linearly decrease
 the mass of the progenitor until its full disruption at the present.
@@ -533,7 +535,7 @@ fields to the stream and background fields.
 
 The central panel of \figurename~\ref{fig:features} shows the map of GD-1, with fields of interest marked in shades of purple for spur-related fields, and shades of blue for blob-related fields.
 In both cases, we analyze the stream region (darkest shade), overdensity off from the stream (medium shade) and use a field on the opposite side of the stream from the overdensity as a control (lightest shade).
-The $\phi_1$ range is the same for all three fields associated with a given feature, and the control and feature field have the same area, while the stream field is smaller to avoid cross-contamination.
+The $\phi_1$ range is the same for all three fields for a given feature, and the control and feature fields have the same area (the stream field is smaller to avoid cross-contamination).
 
 For each of the examined fields, we present the color-magnitude diagram of stars selected on proper motions (left subpanels) and proper motions of photometrically selected stars (right subpanels), with spur fields on the top and blob fields on the bottom of \figurename~\ref{fig:features}.
 % In both rows, arranged from left to right are the stream, the feature, and the control field.
@@ -541,14 +543,14 @@ Stars selected from the stream fields show a clear overdensity in the CMD select
 The two stream fields have a clear relative offset in proper motions, as expected from the velocity gradients shown in \figurename~\ref{fig:track-and-model}.
 Furthermore, the main-sequence turn-off of the $\phi_1\sim-15^\circ$ field appears to be fainter than the $\phi_1\sim-35^\circ$, consistent with the distance gradient across the stream measured by \citet{Koposov:2010}.
 
-On the other hand, the control fields have some stars entering both the CMD and proper-motion selection boxes, but without any significant overdensities in either.
+The control fields have some stars in both the CMD and proper-motion selection boxes, but without any significant overdensities in either.
 CMDs of the spur and blob fields have more stars in the selection box than their respective control fields, and the distribution within the box is qualitatively similar to that of the corresponding stream field, suggesting a similar distance.
 In proper motions, the spur and blob fields also display properties similar to the adjacent stream fields, with clear overdensities of stars in the selection box.
 
 Stars from the spur and the blob are similar to those along the main stream track in the color-magnitude diagram and in proper motions, which confirms their association to GD-1.
 The proximity of these off-stream features to large gaps in the stream is suggestive of the gaps being their origin, further implied by hints of relative velocity differences.
 For example, the median proper motion of the blob is offset from the adjacent stream field by $\approx0.3$\,mas\,yr$^{-1}$ in the positive $\mu_{\phi_1}$ direction.
-We defer detailed modeling of these features to infer their co-evolution with the stream for a future study.
+We defer detailed modeling of these features to infer their co-evolution with the stream for future work.
 
 
 \section{Discussion}
@@ -559,9 +561,13 @@ The \gaia\ proper motions were critical for selecting members of the retrograde 
 In what follows, we discuss how this first view of GD-1 in the \gaia\ era is already transforming what we expect to learn about the Galaxy from streams in general, and GD-1 in particular.
 
 First, the absence of a clear progenitor has been a long-standing hurdle in dynamical modeling of GD-1, mostly due to the unknown true extent of the stream.
-Confirming the progenitor location suggested here, $(\phi_1, \phi_2) = (-13.5^\circ,-0.5^\circ)$, for example by measuring the (canonical) angle variations along the stream \citep{Bovy:2014}, would motivate further searches for stream members along the trailing arm (positive $\phi_1$) to symmetrically match the extent of the leading arm.
+Confirming the progenitor location suggested here, $(\phi_1, \phi_2) =
+(-13.5^\circ,-0.5^\circ)$, would motivate further searches for stream members
+along the trailing arm (positive $\phi_1$) to symmetrically match the extent of
+the leading arm.
+% for example measuring the (canonical) angle variations along the stream \citep{Bovy:2014}
 The stream length is directly proportional to the information it provides on the underlying gravitational potential \citep{Bonaca:2018}, making GD-1 a top modeling priority to map the inner 30\,kpc of the Galaxy, even at the length of $\sim90^\circ$ inferred in this work.
-Properly accounting for the progenitor would also unleash the full constraining power of detailed density structure within the tails, as advocated by \citet{Kupper:2015}.
+Properly accounting for the progenitor would also allow for studying detailed density structure within the tails, as advocated by \citet{Kupper:2015}.
 
 Next, GD-1 is no longer a simple, one-dimensional structure (see also \citealt{DeBoer:2018}).
 Not only are the density variations (gaps) confirmed as highly significant, but for the first time we have mapped tidal debris from a globular cluster beyond the thin stellar track: stars from the GD-1 stream have been found up to $\sim1^\circ$ away from the main stream track.
@@ -579,8 +585,9 @@ Confirming the origin of gaps and the off-track features in GD-1 will require
 both detailed modeling of the stream formation in the presence of massive
 perturbers and follow-up radial velocity measurements of candidate GD-1 members.
 Radial velocities will help remove the remaining contamination, further
-improving the contrast of the stream, and will enable measurements of energy and
-angular momentum along the stream and off-track features.
+improving the contrast of the stream, and will enable measurements of
+differential energy and angular momentum along the stream and off-track
+features.
 While constraints on subhalo interactions from individual gaps leave serious
 degeneracies between, e.g., the time of the encounter and the mass of the
 perturber, energy offsets are time-independent and are a promising avenue
