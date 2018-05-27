@@ -1,0 +1,105 @@
+We thank the referee for a constructive report that has improved the quality of
+this work. Below, we have copied the remarks from the referee (indented by >)
+and have responded to each point in text that immediately follows.
+
+
+> The analysis of the Gaia DR2 data requires some care, especially at the faint
+> end. For example, the authors do not discuss the amplitude of the correlations
+> between the proper motion components and how these may affect their selection
+> of tentative members. (By the way, the plots show relatively large ranges,
+> particularly those of the proper motions and it would be useful if a few
+> zoom-ins are included, so that the reader can assess better the data.).
+>
+> It would also be useful if the authors would explore how many stars in the
+> regions around the stream have 2 parameter instead of 5 parameter solutions
+> (i.e. they have position measured on the sky but no proper motions).
+>
+> Although the authors comment that all the stars have 8 or more visibility
+> periods, this does not reflect completeness of the dataset but merely the
+> reliability of the astrometric solution. Therefore maps showing the quality of
+> the astrometric data in this region of the sky should be included as they
+> enhance the credibility of the various features the authors claim to find. As
+> a guide to what are the relevant diagnostics, the authors may wish to use
+> Arenou et a. 2018 or Lindegren et al 2018.
+>
+> The presence of an overdensity that could correspond to the location of the
+> progenitor is not so clear from the plots shown in the paper. Again a zoom-in
+> might help here.
+
+* APW:
+* TODO: final figure summarize data quality and dust
+* Push back on Zoom-ins? -> plot them for the referee, don't add much
+* TODO: send Ana file with extinction estimates
+
+
+> The authors need to include a measurement of the proper motion in the
+> equatorial reference frame, for example, at the location of the highest
+> density of the stream. This is clearly missing from the paper, and would make
+> the paper useful to other readers.
+
+* APW: easy, but stupid
+
+
+> The authors do not use the Gaia photometry, which although shallower is likely
+> to be significantly more accurate. How do the CMDs look like in the Gaia
+> bands?
+
+* AB: will check CMD
+* Respond with plot and comment
+* Main sequence becomes flatter
+
+
+> The authors do not re-derive a distance to the stream, is there a reason for
+> this? It would perhaps be useful to overlay the isochrone on the Gaia data to
+> try to determine the distance to GD-1 more accurately, and hence also the
+> tangential velocities of the stars in the stream.
+
+* AB: Punt to next paper: respond that distance not the focus
+
+
+> It was not clear to me how the solar reflex motion was corrected via the
+> equation given, where does this stem from?
+
+We have added a sentence to clarify how this was done.
+
+
+> The significance of the various features (the blob, the spur) needs to be
+> quantified. For example, Fig.4 seems to show a small overdensity in the "off
+> blob" region on the proper motion diagram but there is no mention of this.
+
+* APW/AB: Define significance
+
+
+> The authors state that the proximity of the features to the location of the
+> large gaps suggests that they might be related. Please elaborate on how.
+
+* AB: explain the reference to Yoon et al., be explicit about the possible
+  connection to the gap
+
+
+> The orbit shown in Fig.3 is not integrated sufficiently long to be able to
+> establish whether the stream has crossed the disc. Please include a comparison
+> to an orbit integrated for 6-8 Gyr.
+
+The orbit shown in Figure 3 crosses the disk midplane (z=0) twice in the segment of the orbit shown. Given uncertainties in the Milky Way's gravitational potential, and uncertainties in the full-space motion of the stream progenitor, we don't think that including a 6-8 Gyr integration in the paper will be too meaningful. However, we have extended the integration time for the paper figure to 1 Gyr, and attach a figure with a 6 Gyr integration with this response for the referee to see.
+
+
+* Comments from the AAS statistics editor:
+
+> In Fig 2, the authors choose a parabolic model for the GD-1 stream with
+> (arbitrary?) lower/upper boundaries. This band clearly includes some
+> background stars, and may miss some stream stars around \phi_1=-30d. It would
+> be nice to identify stream members by some statistical technique, either in
+> the 2D sky or 4D sky+kinematics space.
+
+> I suggest the authors consult the excellent summary of modern `spatial point
+> processes' methodology with cookbook to the comprehensive 'spatstat' R/CRAN
+> package, by A.Baddeley et al. 'Spatial Point Patterns: Methodology and
+> Applications with R' (2015). For example, I suspect a good list of stream
+> members could emerge from a Voronoi tessellation with truncation of tile
+> areas. Other possibilities include: nearest neighbors within a distance
+> threshold, nonparametric density estimation, Allard-Fraley feature detection
+> (MLE on Voronoi tessellation), and Byers-Raftery feature detection (MLE
+> mixture model on k-NN distribution).
+
+* APW: simple statistical technique in 4D, punt
