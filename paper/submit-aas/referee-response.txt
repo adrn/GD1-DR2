@@ -55,6 +55,9 @@ and have responded to each point in text that immediately follows.
 > tangential velocities of the stars in the stream.
 
 * AB: Punt to next paper: respond that distance not the focus
+- we do lay an isochrone in fig 1, consistent with a previously reported distance and stellar population
+- however, we note that fig 4 indicates a distance gradient, closer at trailing than leading tail, also consistent with the literature
+- while re-deriving a distance to the stream using would be useful, it is rather involved and would need to be done along the stream, so we are leaving it for our next contribution where we will derive more general properties of GD-1, while focusing on the new features in this one
 
 
 > It was not clear to me how the solar reflex motion was corrected via the
