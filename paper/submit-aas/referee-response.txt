@@ -29,7 +29,12 @@ and have responded to each point in text that immediately follows.
 * APW:
 * TODO: final figure summarize data quality and dust
 * Push back on Zoom-ins? -> plot them for the referee, don't add much
-* TODO: send Ana file with extinction estimates
+
+- Dust map done
+- 2-parameter solution done
+- Source density at phi1 = [-40, -20, 0], phi2 = 0 is ~8000 sources/deg^2 -- should be close to 100% complete according to Arenou.
+https://arxiv.org/pdf/1804.09375.pdf
+https://arxiv.org/pdf/1804.09366.pdf
 
 
 > The authors need to include a measurement of the proper motion in the
