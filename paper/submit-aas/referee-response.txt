@@ -44,10 +44,14 @@ and have responded to each point in text that immediately follows.
 > to be significantly more accurate. How do the CMDs look like in the Gaia
 > bands?
 
-* AB: will check CMD
-* Respond with plot and comment
-* Main sequence becomes flatter
+The referee is correct that the Gaia photometry is significantly more accurate than PanSTARRS, however, at faint magnitudes, the regime where GD-1 members are most easily separable from the Milky Way field stars, the Gaia BP-RP color is much more uncertain than the PanSTARRS g-i color.
+As a part of the response, we attach a figure that compares Gaia (left) and PanSTARRS (right) color-magnitude diagrams of GD-1 stars, selected with -1<phi_2<1, -50<phi_1<-10, and our fiducial proper motion selection.
+Typical photometric uncertainties are shown as a function of magnitude, centered on 0 color in both panels.
+PanSTARRS photometry is systematics dominated in the entire range, and the uncertainty in both g and i bands is 0.01 mag (0.014 mag for g-i color). 
+Uncertainties in Gaia's G band are smaller in the entire range, but BP-RP's vary from 0.001 at G~15 to 0.05 at G~20, approximately 5 times larger than PanSTARRS at comparably faint magnitudes.
+This leads to GD-1's main sequence being much better defined in PanSTARRS color-magnitude diagram than in Gaia's, so we opt to retain PanSTARRS photometry for selection of likely GD-1 members.
 
+Q: do we comment on using g vs G?
 
 > The authors do not re-derive a distance to the stream, is there a reason for
 > this? It would perhaps be useful to overlay the isochrone on the Gaia data to
