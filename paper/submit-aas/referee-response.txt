@@ -49,25 +49,21 @@ https://arxiv.org/pdf/1804.09366.pdf
 > to be significantly more accurate. How do the CMDs look like in the Gaia
 > bands?
 
-The referee is correct that the Gaia photometry is significantly more accurate than PanSTARRS, however, at faint magnitudes, the regime where GD-1 members are most easily separable from the Milky Way field stars, the Gaia BP-RP color is much more uncertain than the PanSTARRS g-i color.
-As a part of the response, we attach a figure that compares Gaia (left) and PanSTARRS (right) color-magnitude diagrams of GD-1 stars, selected with -1<phi_2<1, -50<phi_1<-10, and our fiducial proper motion selection.
+The referee is correct that the Gaia photometry is more accurate than PanSTARRS, however, at faint magnitudes, the regime where GD-1 members are most easily separable from the Milky Way field stars, the Gaia BP-RP color is much more uncertain than the PanSTARRS g-i color.
+As a part of the response, we attach a figure that compares Gaia (left) and PanSTARRS (right) color-magnitude diagrams of GD-1 stars, selected within -1<phi_2<1, -50<phi_1<-10, and our fiducial proper motion selection.
 Typical photometric uncertainties are shown as a function of magnitude, centered on 0 color in both panels.
 PanSTARRS photometry is systematics dominated in the entire range, and the uncertainty in both g and i bands is 0.01 mag (0.014 mag for g-i color). 
 Uncertainties in Gaia's G band are smaller in the entire range, but BP-RP's vary from 0.001 at G~15 to 0.05 at G~20, approximately 5 times larger than PanSTARRS at comparably faint magnitudes.
 This leads to GD-1's main sequence being much better defined in PanSTARRS color-magnitude diagram than in Gaia's, so we opt to retain PanSTARRS photometry for selection of likely GD-1 members.
-
-Q: do we comment on using g vs G?
 
 > The authors do not re-derive a distance to the stream, is there a reason for
 > this? It would perhaps be useful to overlay the isochrone on the Gaia data to
 > try to determine the distance to GD-1 more accurately, and hence also the
 > tangential velocities of the stars in the stream.
 
-* AB: Punt to next paper: respond that distance not the focus
-- we do lay an isochrone in fig 1, consistent with a previously reported distance and stellar population
-- however, we note that fig 4 indicates a distance gradient, closer at trailing than leading tail, also consistent with the literature
-- while re-deriving a distance to the stream using would be useful, it is rather involved and would need to be done along the stream, so we are leaving it for our next contribution where we will derive more general properties of GD-1, while focusing on the new features in this one
-
+An isochrone at a fiducial distance to the stream is already overlaid on the GD-1 color-magnitude diagram (cmd) in Figure 1, and used to define a cmd selection box, which is very useful for improving the selection of likely GD-1 members.
+Since the focus of this paper is reporting on new features of GD-1 detected in a cleaner map of the stream, using literature distance to the stream as a means to improve member selection seems adequate.
+Of course, more precise distances, and hence tangential velocities, would be especially useful for dynamical modeling of GD-1, but improving on the current measurements would require a more involved calculation, so we leave it for future work where we plan to comprehensively derive stream properties in all six dimensions of the phase space.
 
 > It was not clear to me how the solar reflex motion was corrected via the
 > equation given, where does this stem from?
