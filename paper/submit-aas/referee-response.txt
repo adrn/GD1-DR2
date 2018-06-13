@@ -81,8 +81,10 @@ We have added a sentence to clarify how this was done.
 > The authors state that the proximity of the features to the location of the
 > large gaps suggests that they might be related. Please elaborate on how.
 
-* AB: explain the reference to Yoon et al., be explicit about the possible
-  connection to the gap
+To clarify the possible association, we've changed this statement to:
+---
+Both the spur and the blob are close to large gaps in the stream, so a mechanism that displaces stars from their original orbits along the stream to orbits beyond the stream would explain both sets of features. Future observations of the full 3-D kinematics combined with detailed dynamical modeling of the GD-1 system will be able to test this scenario.
+---
 
 
 > The orbit shown in Fig.3 is not integrated sufficiently long to be able to
