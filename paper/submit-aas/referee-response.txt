@@ -26,15 +26,13 @@ and have responded to each point in text that immediately follows.
 > progenitor is not so clear from the plots shown in the paper. Again a zoom-in
 > might help here.
 
-* APW:
-* TODO: final figure summarize data quality and dust
-* Push back on Zoom-ins? -> plot them for the referee, don't add much
+We thank the referee for these suggestions and agree that it is useful and necessary to show the quality of the astrometric solution in this region of the sky. We have added a new Figure to the Appendix that contains maps of (1) the density of 2-parameters solutions in this region, (2) the unit weight error (as defined in Lindegren+2018, C.1), and (3) the SFD dust extinction around GD-1.
 
-- Dust map done
-- 2-parameter solution done
-- Source density at phi1 = [-40, -20, 0], phi2 = 0 is ~8000 sources/deg^2 -- should be close to 100% complete according to Arenou.
-https://arxiv.org/pdf/1804.09375.pdf
-https://arxiv.org/pdf/1804.09366.pdf
+We have also computed the source density at several locations along the stream to assess whether source crowding could impact the completeness (as in Arenou+2018). We find that, at each location along the stream between phi1 = (-50, -10) the source density is never larger than ~8000 sources/deg^2 (estimated using the 2-parameter and 5-parameter sources), and is far below the densities where crowding becomes a problem.
+
+TODO: correlations between proper motion components?
+
+We have decided not to include further zoom-in panels, as our figures already contain many panels.
 
 
 > The authors need to include a measurement of the proper motion in the
@@ -52,9 +50,10 @@ https://arxiv.org/pdf/1804.09366.pdf
 The referee is correct that the Gaia photometry is more accurate than PanSTARRS, however, at faint magnitudes, the regime where GD-1 members are most easily separable from the Milky Way field stars, the Gaia BP-RP color is much more uncertain than the PanSTARRS g-i color.
 As a part of the response, we attach a figure that compares Gaia (left) and PanSTARRS (right) color-magnitude diagrams of GD-1 stars, selected within -1<phi_2<1, -50<phi_1<-10, and our fiducial proper motion selection.
 Typical photometric uncertainties are shown as a function of magnitude, centered on 0 color in both panels.
-PanSTARRS photometry is systematics dominated in the entire range, and the uncertainty in both g and i bands is 0.01 mag (0.014 mag for g-i color). 
+PanSTARRS photometry is systematics dominated in the entire range, and the uncertainty in both g and i bands is 0.01 mag (0.014 mag for g-i color).
 Uncertainties in Gaia's G band are smaller in the entire range, but BP-RP's vary from 0.001 at G~15 to 0.05 at G~20, approximately 5 times larger than PanSTARRS at comparably faint magnitudes.
 This leads to GD-1's main sequence being much better defined in PanSTARRS color-magnitude diagram than in Gaia's, so we opt to retain PanSTARRS photometry for selection of likely GD-1 members.
+
 
 > The authors do not re-derive a distance to the stream, is there a reason for
 > this? It would perhaps be useful to overlay the isochrone on the Gaia data to
@@ -65,10 +64,14 @@ An isochrone at a fiducial distance to the stream is already overlaid on the GD-
 Since the focus of this paper is reporting on new features of GD-1 detected in a cleaner map of the stream, using literature distance to the stream as a means to improve member selection seems adequate.
 Of course, more precise distances, and hence tangential velocities, would be especially useful for dynamical modeling of GD-1, but improving on the current measurements would require a more involved calculation, so we leave it for future work where we plan to comprehensively derive stream properties in all six dimensions of the phase space.
 
+
 > It was not clear to me how the solar reflex motion was corrected via the
 > equation given, where does this stem from?
 
-We have added a sentence to clarify how this was done.
+We have added a sentence to clarify how this was done:
+---
+In detail, we project the solar velocity vector onto the tangent space at each star's sky position, convert to angular motion using the assumed distance, and subtract the solar component from each star's proper motion (this is done using the \package{astropy} and \package{gala} packages).
+---
 
 
 > The significance of the various features (the blob, the spur) needs to be
@@ -112,4 +115,8 @@ The orbit shown in Figure 3 crosses the disk midplane (z=0) twice in the segment
 > (MLE on Voronoi tessellation), and Byers-Raftery feature detection (MLE
 > mixture model on k-NN distribution).
 
-* APW: simple statistical technique in 4D, punt
+The parabolic model (in phi1, phi2) is fit to the stream ridge points, then shifted up and down to define a selection region (as described in Section 3.1).
+
+We agree that, to characterize the stream, it would be better to build a probabilistic model of the stream in all available data dimensions.
+However, to be useful for future work, this would require simultaneously modeling the phase-space density of the stream so that the variations with distance and distribution of proper motions could be taken into account in a robust way.
+As the focus of this work is mainly to point out unexpected, off-track features that appear related to the stream, we defer this more sophisticated modeling to future work.
