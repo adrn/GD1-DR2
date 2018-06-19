@@ -31,11 +31,11 @@ We find that, at each location along the stream between phi1 = (-50, -10) the so
 
 We don't see any correlations between astrometric issues or incompleteness and the features that we see associated with the stream.
 We do, however, see density variations in the main stream track due to the scanning pattern (especially between phi1=[-80, -55]).
-Given this and the above, we have added some text to Section TODO to explain this, but have decided not to add the attached figure to the text because we have instead included a new figure to address a later point (see below).
+Given this and the above, we have added some text to Section 3.1 to describe this, but have decided not to add the attached figure to the text because we have instead included a new figure to address a later point (see below).
 
-We have also looked at the magnitude of correlations between proper motion components in the selection region and found TODO.
+We have also looked at the magnitude of correlations between proper motion components in the selection region and find that TODO.
 
-Lastly, we have decided not to include further zoom-in panels, as our figures already contain many panels, but we have tightened the axis ranges on the proper motion panels of (what is now) Figure TODO and hope that this makes the distribution in proper-motion space clearer.
+Lastly, we have decided not to include further zoom-in panels, as our figures already contain many panels, but we have tightened the axis ranges on the proper motion panels of (what is now) Figure 5 and hope that this makes the distribution in proper-motion space clearer.
 
 
 > The authors need to include a measurement of the proper motion in the
@@ -43,7 +43,7 @@ Lastly, we have decided not to include further zoom-in panels, as our figures al
 > density of the stream. This is clearly missing from the paper, and would make
 > the paper useful to other readers.
 
-* APW: easy, but stupid
+TODO:
 
 
 > The authors do not use the Gaia photometry, which although shallower is likely
@@ -81,7 +81,9 @@ In detail, we project the solar velocity vector onto the tangent space at each s
 > quantified. For example, Fig.4 seems to show a small overdensity in the "off
 > blob" region on the proper motion diagram but there is no mention of this.
 
-* APW/AB: Define significance
+We have added a new figure and some discussion to Section 3.1 to address this.
+In brief, we construct a model of the phi_2 distribution in three areas of phi_1: one centered on the spur, one on the blob, and one in between as a control field.
+We find that in the feature fields, the model prefers adding an additional component to explain the spur and the blob (rather than just background variations), whereas in the control field the amplitude of the additional component is consistent with 0.
 
 
 > The authors state that the proximity of the features to the location of the
