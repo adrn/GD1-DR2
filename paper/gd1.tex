@@ -571,10 +571,20 @@ where $\alpha_{\textrm{bg}}$ is the fraction of background stars in the field, $
 }
 \changes{
 We generate posterior samples in the parameters of this model in each $\phi_1$ range by specifying uniform priors over all parameters except the variances, for which we use priors that are uniform in the logarithm of the variance.
-We use an ensemble Markov Chain Monte Carlo (MCMC) sampler with 64 walkers to generate posterior samples (\citealt{Foreman-Mackey:2013}) and run the sampler for a total of 4096 steps, discarding the first 2048 samples as ``burn-in.''
-\figurename~\ref{fig:density-model} summarizes the results of this inference: top row shows histograms of the $\phi_2$ positions of stars in each $\phi_1$ range (left to right) and bottom row shows marginal posterior probability distributions for $\alpha_{\textrm{bg}}$, $\alpha_{\textrm{s}}$, and $\alpha_{\textrm{f}}$ estimated from the posterior samples for each $phi_1$ range.
-TODO: shows what
+We use an ensemble Markov Chain Monte Carlo (MCMC) sampler (\citealt{Foreman-Mackey:2013}) to generate posterior samples and run the sampler with 64 walkers for a total of 4096 steps, discarding the first 2048 samples as ``burn-in.''
+\figurename~\ref{fig:density-model} summarizes the results of this inference: top row shows histograms of the $\phi_2$ positions of stars in each $\phi_1$ range (left to right) with maximum a posteriori inferred density over-plotted (black curve) and bottom row shows marginal posterior probability distributions for $\alpha_{\textrm{bg}}$, $\alpha_{\textrm{s}}$, and $\alpha_{\textrm{f}}$ estimated from the posterior samples for each $phi_1$ range.
+In each of the feature fields, the posterior samples for the feature mixture component amplitude are inconsistent with 0, implying that the features are not consistent with the background stellar density.
 }
+
+% \begin{figure}
+% \begin{center}
+% \includegraphics[width=\textwidth]{density-model.pdf}
+% \end{center}
+% \caption{
+% TODO
+% }
+% \label{fig:density-model}
+% \end{figure}
 
 Stars from the spur and the blob are similar to those along the main stream track in the color-magnitude diagram and in proper motions, which confirms their likely association to GD-1.
 \changes{Both the spur and the blob are close to large gaps in the stream, so a mechanism that displaces stars from their original orbits along the stream to orbits beyond the stream would explain both sets of features.
