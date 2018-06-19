@@ -1,6 +1,4 @@
-We thank the referee for a constructive report that has improved the quality of
-this work. Below, we have copied the remarks from the referee (indented by >)
-and have responded to each point in text that immediately follows.
+We thank the referee for a constructive report that has improved the quality of this work. Below, we have copied the remarks from the referee (indented by >) and have responded to each point in text that immediately follows.
 
 
 > The analysis of the Gaia DR2 data requires some care, especially at the faint
@@ -26,13 +24,18 @@ and have responded to each point in text that immediately follows.
 > progenitor is not so clear from the plots shown in the paper. Again a zoom-in
 > might help here.
 
-We thank the referee for these suggestions and agree that it is useful and necessary to show the quality of the astrometric solution in this region of the sky. We have added a new Figure to the Appendix that contains maps of (1) the density of 2-parameters solutions in this region, (2) the unit weight error (as defined in Lindegren+2018, C.1), and (3) the SFD dust extinction around GD-1.
+We thank the referee for these suggestions and agree that it is useful and important to discuss the quality of the astrometric solution in this region of the sky.
+We have attached a figure to this report that shows maps of (1) the density of 2-parameters solutions in this region, (2) the unit weight error (as defined in Lindegren+2018, C.1), and (3) the SFD dust extinction around GD-1.
+We have also computed the source density at several locations along the stream to assess whether source crowding could impact the completeness (as in Arenou+2018).
+We find that, at each location along the stream between phi1 = (-50, -10) the source density is never larger than ~8000 sources/deg^2 (estimated using the 2-parameter and 5-parameter sources), and is far below the densities where crowding becomes a problem.
 
-We have also computed the source density at several locations along the stream to assess whether source crowding could impact the completeness (as in Arenou+2018). We find that, at each location along the stream between phi1 = (-50, -10) the source density is never larger than ~8000 sources/deg^2 (estimated using the 2-parameter and 5-parameter sources), and is far below the densities where crowding becomes a problem.
+We don't see any correlations between astrometric issues or incompleteness and the features that we see associated with the stream.
+We do, however, see density variations in the main stream track due to the scanning pattern (especially between phi1=[-80, -55]).
+Given this and the above, we have added some text to Section TODO to explain this, but have decided not to add the attached figure to the text because we have instead included a new figure to address a later point (see below).
 
-TODO: correlations between proper motion components?
+We have also looked at the magnitude of correlations between proper motion components in the selection region and found TODO.
 
-We have decided not to include further zoom-in panels, as our figures already contain many panels.
+Lastly, we have decided not to include further zoom-in panels, as our figures already contain many panels, but we have tightened the axis ranges on the proper motion panels of (what is now) Figure TODO and hope that this makes the distribution in proper-motion space clearer.
 
 
 > The authors need to include a measurement of the proper motion in the
@@ -47,10 +50,10 @@ We have decided not to include further zoom-in panels, as our figures already co
 > to be significantly more accurate. How do the CMDs look like in the Gaia
 > bands?
 
-The referee is correct that the Gaia photometry is more accurate than PanSTARRS, however, at faint magnitudes, the regime where GD-1 members are most easily separable from the Milky Way field stars, the Gaia BP-RP color is much more uncertain than the PanSTARRS g-i color.
+The referee is correct that the Gaia photometry is more accurate than PanSTARRS, however, at faint magnitudes (G > 18) --- the regime where GD-1 members are most easily separable from the Milky Way field stars --- the Gaia BP-RP color is much more uncertain than the PanSTARRS g-i color.
 As a part of the response, we attach a figure that compares Gaia (left) and PanSTARRS (right) color-magnitude diagrams of GD-1 stars, selected within -1<phi_2<1, -50<phi_1<-10, and our fiducial proper motion selection.
 Typical photometric uncertainties are shown as a function of magnitude, centered on 0 color in both panels.
-PanSTARRS photometry is systematics dominated in the entire range, and the uncertainty in both g and i bands is 0.01 mag (0.014 mag for g-i color).
+PanSTARRS photometry is systematics-dominated in the entire range, and the uncertainty in both g and i bands is 0.01 mag (0.014 mag for g-i color).
 Uncertainties in Gaia's G band are smaller in the entire range, but BP-RP's vary from 0.001 at G~15 to 0.05 at G~20, approximately 5 times larger than PanSTARRS at comparably faint magnitudes.
 This leads to GD-1's main sequence being much better defined in PanSTARRS color-magnitude diagram than in Gaia's, so we opt to retain PanSTARRS photometry for selection of likely GD-1 members.
 
@@ -94,7 +97,9 @@ Both the spur and the blob are close to large gaps in the stream, so a mechanism
 > establish whether the stream has crossed the disc. Please include a comparison
 > to an orbit integrated for 6-8 Gyr.
 
-The orbit shown in Figure 3 crosses the disk midplane (z=0) twice in the segment of the orbit shown. Given uncertainties in the Milky Way's gravitational potential, and uncertainties in the full-space motion of the stream progenitor, we don't think that including a 6-8 Gyr integration in the paper will be too meaningful. However, we have extended the integration time for the paper figure to 1 Gyr, and attach a figure with a 6 Gyr integration with this response for the referee to see.
+The orbit shown in Figure 3 crosses the disk midplane (z=0) twice in the segment of the orbit shown.
+Given uncertainties in the Milky Way's gravitational potential, and uncertainties in the full-space motion of the stream progenitor, we don't think that including a 6-8 Gyr integration in the paper will be more illustrative.
+However, we have extended the integration time for the paper figure to 1 Gyr, and attach a figure with a 6 Gyr integration with this response for the referee to see.
 
 
 * Comments from the AAS statistics editor:
@@ -120,3 +125,10 @@ The parabolic model (in phi1, phi2) is fit to the stream ridge points, then shif
 We agree that, to characterize the stream, it would be better to build a probabilistic model of the stream in all available data dimensions.
 However, to be useful for future work, this would require simultaneously modeling the phase-space density of the stream so that the variations with distance and distribution of proper motions could be taken into account in a robust way.
 As the focus of this work is mainly to point out unexpected, off-track features that appear related to the stream, we defer this more sophisticated modeling to future work.
+
+
+
+=========================================
+For the journal editor:
+
+We have addressed each of the referee's comments in the attached response, but in doing so we have added a new figure that we believe improves the paper and directly addresses one of the referee's points. We realize that now the word count is slightly over the limit for ApJ letters (we count XX words). However, we do still feel that this result and paper is in the spirit of the Letters and would like to keep it in consideration for this journal. Please let us know if we should work on trimming the text, or else please advise. Thanks!

@@ -23,13 +23,14 @@
 \newcommand{\masyr}{\ensuremath{\textrm{mas}~\textrm{yr}^{-1}}}
 \newcommand{\feh}{\ensuremath{[\textrm{Fe} / \textrm{H}]}}
 \newcommand{\article}{\textsl{Letter}}
+\newcommand{\given}{\,|\,}
 
 \newcommand{\sectionname}{Section}
 \newcommand{\equationname}{Equation}
 \renewcommand{\tablename}{Table}
 
 \newcommand{\todo}[1]{{\color{red} TODO: #1}}
-\newcommand{\changes}[1]{{\color{green} #1}}
+\newcommand{\changes}[1]{{\textbf{#1}}}
 
 % aastex parameters
 % \received{not yet; THIS IS A DRAFT}
@@ -550,9 +551,31 @@ The control fields have some stars in both the CMD and proper-motion selection b
 CMDs of the spur and blob fields have more stars in the selection box than their respective control fields, and the distribution within the box is qualitatively similar to that of the corresponding stream field, suggesting a similar distance.
 In proper motions, the spur and blob fields also display properties similar to the adjacent stream fields, with clear overdensities of stars in the selection box.
 
+\changes{
+To quantify the significance of these features, we construct a statistical model of the linear density of the filtered sky positions as a function of $\phi_2$ around each of the features and at a control region.
+We select three equal ranges of $\phi_1$ centered on the spur, $\phi_1 \in ()^\circ$, the blob, $\phi_1 \in ()^\circ$, and in between, as a control field, $\phi_1 \in ()^\circ$, and model the one-dimensional density in $\phi_2$ in each of these regions to see if the number of stars at the location of each feature is consistent with the background level.
+We use a four-component mixture model to represent the density consisting of a uniform background over the range $\phi_2 \in (-10, 5)^\circ$, a two-component Gaussian mixture to represent the main stream with mean $\mu_{\textrm{s}}$ and variances $\sigma_{\textrm{s}, 1}^2$ and $\sigma_{\textrm{s}, 2}^2$, and a single Gaussian for each feature with mean and variance $(\mu_{\textrm{f}}, \sigma_{\textrm{f}}^2)$.
+The full density model given all parameters $\bs{\theta} = (\alpha_{\textrm{bg}}, \alpha_{\textrm{s}}, \mu_{\textrm{s}}, \sigma_{\textrm{s}, 1}, \sigma_{\textrm{s}, 2}, \mu_{\textrm{f}}, \sigma_{\textrm{f}})$ is
+\begin{equation}
+    \begin{split}
+    p(\phi_2 \given \bs{\theta}) &=
+            \alpha_{\textrm{bg}} \, \mathcal{U}(-10, 5) \\ & \quad +
+            \alpha_{\textrm{s}} \,
+                (\mathcal{N}(\phi_2 \given \mu_{\textrm{s}}, \sigma_{\textrm{s}, 1}) + \mathcal{N}(\phi_2 \given \mu_{\textrm{s}}, \sigma_{\textrm{s}, 2})) \\ & \quad +
+            \alpha_{\textrm{f}} \,
+                \mathcal{N}(\phi_2 \given \mu_{\textrm{f}}, \sigma_{\textrm{f}})
+    \end{split}
+\end{equation}
+where $\alpha_{\textrm{bg}}$ is the fraction of background stars in the field, $\alpha_{\textrm{s}}$ is the fraction of stars associated with the mean stream track, and $\alpha_{\textrm{f}} = (1 - \alpha_{\textrm{bg}} - \alpha_{\textrm{s}})$ is the fraction of stars associated with either the spur, the blob, or at the location of the spur/blob in the control field.
+% and ignore uncertainties on the sky position $\phi_2$.
+
+We generate posterior samples in the parameters of this model in each $\phi_1$ range by specifying uniform priors over ...
+
+}
+
 Stars from the spur and the blob are similar to those along the main stream track in the color-magnitude diagram and in proper motions, which confirms their likely association to GD-1.
-Both the spur and the blob are close to large gaps in the stream, so a mechanism that displaces stars from their original orbits along the stream to orbits beyond the stream would explain both sets of features.
-Future observations of the full 3-D kinematics combined with detailed dynamical modeling of the GD-1 system will be able to test this scenario.
+\changes{Both the spur and the blob are close to large gaps in the stream, so a mechanism that displaces stars from their original orbits along the stream to orbits beyond the stream would explain both sets of features.
+Future observations of the full 3-D kinematics combined with detailed dynamical modeling of the GD-1 system will be able to test this scenario.}
 
 % The proximity of these off-stream features to large gaps in the stream is suggestive of the gaps being their origin, further implied by hints of relative velocity differences.
 % For example, the median proper motion of the blob is offset from the adjacent stream field by $\approx0.3$\,mas\,yr$^{-1}$ in the positive $\mu_{\phi_1}$ direction.
