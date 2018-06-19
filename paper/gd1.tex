@@ -553,7 +553,7 @@ In proper motions, the spur and blob fields also display properties similar to t
 
 \changes{
 To quantify the significance of these features, we construct a statistical model of the linear density of the filtered sky positions as a function of $\phi_2$ around each of the features and at a control region.
-We select three equal ranges of $\phi_1$ centered on the spur, $\phi_1 \in ()^\circ$, the blob, $\phi_1 \in ()^\circ$, and in between, as a control field, $\phi_1 \in ()^\circ$, and model the one-dimensional density in $\phi_2$ in each of these regions to see if the number of stars at the location of each feature is consistent with the background level.
+We select three equal ranges of $\phi_1$ centered on the spur, $\phi_1 \in ()^\circ$, the blob, $\phi_1 \in ()^\circ$, and in between (as a control field), $\phi_1 \in ()^\circ$, and model the one-dimensional density in $\phi_2$ in each of these regions. % to see if the number of stars at the location of each feature is consistent with the background level.
 We use a four-component mixture model to represent the density consisting of a uniform background over the range $\phi_2 \in (-10, 5)^\circ$, a two-component Gaussian mixture to represent the main stream with mean $\mu_{\textrm{s}}$ and variances $\sigma_{\textrm{s}, 1}^2$ and $\sigma_{\textrm{s}, 2}^2$, and a single Gaussian for each feature with mean and variance $(\mu_{\textrm{f}}, \sigma_{\textrm{f}}^2)$.
 The full density model given all parameters $\bs{\theta} = (\alpha_{\textrm{bg}}, \alpha_{\textrm{s}}, \mu_{\textrm{s}}, \sigma_{\textrm{s}, 1}, \sigma_{\textrm{s}, 2}, \mu_{\textrm{f}}, \sigma_{\textrm{f}})$ is
 \begin{equation}
@@ -568,9 +568,12 @@ The full density model given all parameters $\bs{\theta} = (\alpha_{\textrm{bg}}
 \end{equation}
 where $\alpha_{\textrm{bg}}$ is the fraction of background stars in the field, $\alpha_{\textrm{s}}$ is the fraction of stars associated with the mean stream track, and $\alpha_{\textrm{f}} = (1 - \alpha_{\textrm{bg}} - \alpha_{\textrm{s}})$ is the fraction of stars associated with either the spur, the blob, or at the location of the spur/blob in the control field.
 % and ignore uncertainties on the sky position $\phi_2$.
-
-We generate posterior samples in the parameters of this model in each $\phi_1$ range by specifying uniform priors over ...
-
+}
+\changes{
+We generate posterior samples in the parameters of this model in each $\phi_1$ range by specifying uniform priors over all parameters except the variances, for which we use priors that are uniform in the logarithm of the variance.
+We use an ensemble Markov Chain Monte Carlo (MCMC) sampler with 64 walkers to generate posterior samples (\citealt{Foreman-Mackey:2013}) and run the sampler for a total of 4096 steps, discarding the first 2048 samples as ``burn-in.''
+\figurename~\ref{fig:density-model} summarizes the results of this inference: top row shows histograms of the $\phi_2$ positions of stars in each $\phi_1$ range (left to right) and bottom row shows marginal posterior probability distributions for $\alpha_{\textrm{bg}}$, $\alpha_{\textrm{s}}$, and $\alpha_{\textrm{f}}$ estimated from the posterior samples for each $phi_1$ range.
+TODO: shows what
 }
 
 Stars from the spur and the blob are similar to those along the main stream track in the color-magnitude diagram and in proper motions, which confirms their likely association to GD-1.
