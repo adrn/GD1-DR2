@@ -41,7 +41,10 @@ Lastly, we have decided not to include further zoom-in panels, as our figures al
 > density of the stream. This is clearly missing from the paper, and would make
 > the paper useful to other readers.
 
-TODO:
+We have added this quantity to the paper in Section 2:
+---
+At this location, between $\phi_1 \in (-18, -10)^\circ$, we find that the mean equatorial sky position of the stream stars is $(\alpha, \delta) = (177.01, 53.99)^\circ$ and the mean proper motion is $(\mu_\alpha \, \cos\delta, \mu_\delta) = (-7.78, -7.85) \pm 0.03~\masyr$, taking into account the covariance matrix for proper motions provided with the \gaia\ data.
+---
 
 
 > The authors do not use the Gaia photometry, which although shallower is likely
