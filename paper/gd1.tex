@@ -304,6 +304,8 @@ $20^\circ$ to negative longitudes.
 Furthermore, the stream reaches its highest surface density where it is the
 narrowest ($\phi_1\sim-13^\circ$), which may be the location of its elusive and
 fully-disrupted progenitor.
+\changes{At this location, between $\phi_1 \in (-18, -10)^\circ$, we find that the mean equatorial sky position of the stream stars is $(\alpha, \delta) = (177.01, 53.99)^\circ$ and the mean proper motion is $(\mu_\alpha \, \cos\delta, \mu_\delta) = (-7.78, -7.85) \pm 0.03~\masyr$, taking into account the covariance matrix for proper motions provided with the \gaia\ data.}
+
 Several of the under-densities and gaps hinted at from photometric selection
 (\citealt{Carlberg:2013, DeBoer:2018}) appear as striking features in this
 significantly cleaner map of the GD-1 stream.
@@ -344,8 +346,7 @@ We define the stream region as $\left| \phi_2 - \phi_{2,
 stream stars (same as \figurename~\ref{fig:selection}), and the two curved lines
 (blue) show the upper and lower boundary of the stream region.
 
-We extract properties of the stream from the region defined above as a function
-of $\phi_1$ by computing median stream properties in (overlapping) $3^\circ$ windows.
+We extract properties of the stream from the region defined above as a function of $\phi_1$ by computing median stream properties in (overlapping) $3^\circ$ windows.
 % we set the window size to $3^\circ$ in $\phi_1$, and shift the window center by
 % $1^\circ$ in longitude for each subsequent measurement.
 Panels (c)--(e) in \figurename~\ref{fig:track-and-model} show the
@@ -422,7 +423,7 @@ this is suggestive of a progenitor system in the final stages of dissolution
 This region is also the thinnest part of the stream, as would be expected for
 recently stripped material; we defer a robust analysis of variations in the
 stream width to future work.
-\todo{TODO: add sentence to discussion about alternate model with fully-disrupted progenitor at -20, ~500-700 Myr ago. Can't rule out a scenario in which the prog disrupted longer ago in one of the larger gaps -- cite de Boer}
+\changes{With present data, however, we cannot rule out a scenario in which the progenitor system disrupted longer ago and resulted in one of the larger gaps (e.g., \citealt{DeBoer:2018}).}
 % that has not yet phase-mixed in multiple dimensions.
 
 We compare the measured stream properties to a simple model for the phase-space
@@ -580,7 +581,10 @@ In each of the feature fields, the posterior samples for the feature mixture com
 \includegraphics[width=\textwidth]{density-model.pdf}
 \end{center}
 \caption{
-TODO
+\emph{Top row}: Density of stars in $\phi_2$ (grey) and inferred density (black curve) for regions around the spur, blob, and a control field.
+The model for the density includes components for the stream, background, and a feature overdensity (the spur or the blob), but with amplitudes that are allowed to go to zero (see \sectionname~\ref{sec:res_gap} for more details.)
+\emph{Bottom row}: Inferred posterior probability distributions over the amplitude ($\alpha$) of each component in each field: $\alpha_{\textrm{s}}$ for the stream, $\alpha_{\textrm{bg}}$ for the background, and $\alpha_{\textrm{f}}$ for the feature.
+In both feature fields, the model prefers an additional component to describe the feature, whereas in the control field the density is consistent with stream + background.
 }
 \label{fig:density-model}
 \end{figure}
