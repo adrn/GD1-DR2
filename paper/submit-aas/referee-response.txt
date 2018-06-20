@@ -33,8 +33,6 @@ We don't see any correlations between astrometric issues or incompleteness and t
 We do, however, see density variations in the main stream track due to the scanning pattern (especially between phi1=[-80, -55]).
 Given this and the above, we have added some text to Section 3.1 to describe this, but have decided not to add the attached figure to the text because we have instead included a new figure to address a later point (see below).
 
-We have also looked at the magnitude of correlations between proper motion components in the selection region and find that TODO.
-
 Lastly, we have decided not to include further zoom-in panels, as our figures already contain many panels, but we have tightened the axis ranges on the proper motion panels of (what is now) Figure 5 and hope that this makes the distribution in proper-motion space clearer.
 
 
