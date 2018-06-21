@@ -574,6 +574,7 @@ We generate posterior samples in the parameters of this model in each $\phi_1$ r
 We use an ensemble Markov Chain Monte Carlo (MCMC) sampler (\citealt{Foreman-Mackey:2013}) to generate posterior samples and run the sampler with 64 walkers for a total of 4096 steps, discarding the first 2048 samples as ``burn-in.''
 \figurename~\ref{fig:density-model} summarizes the results of this inference: top row shows histograms of the $\phi_2$ positions of stars in each $\phi_1$ range (left to right) with maximum a posteriori inferred density over-plotted (black curve) and bottom row shows marginal posterior probability distributions for $\alpha_{\textrm{bg}}$, $\alpha_{\textrm{s}}$, and $\alpha_{\textrm{f}}$ estimated from the posterior samples for each $\phi_1$ range.
 In each of the feature fields, the posterior samples for the feature mixture component amplitude are inconsistent with 0, implying that the features are not consistent with the background stellar density.
+In each of the $\phi_1$ regions, the 15th and 85th percentile values of the feature amplitude, $\alpha_{\textrm{f}}$, are $(0.12, 0.19)$ (spur), $(0.07, 0.22)$ (blob), and $(0.005, 0.103)$ (control).
 }
 
 \begin{figure}
