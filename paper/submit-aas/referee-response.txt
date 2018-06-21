@@ -124,7 +124,7 @@ However, we have extended the integration time for the paper figure to 1 Gyr, an
 > (MLE on Voronoi tessellation), and Byers-Raftery feature detection (MLE
 > mixture model on k-NN distribution).
 
-The parabolic model (in phi1, phi2) is fit to the stream ridge points, then shifted up and down to define a selection region (as described in Section 3.1).
+The polyomial model (in phi1, phi2) is fit to the stream ridge points, then shifted up and down to define a selection region (as described in Section 3.1).
 
 We agree that, to characterize the stream, it would be better to build a probabilistic model of the stream in all available data dimensions.
 However, to be useful for future work, this would require simultaneously modeling the phase-space density of the stream so that the variations with distance and distribution of proper motions could be taken into account in a robust way.
