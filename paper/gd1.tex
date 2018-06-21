@@ -245,7 +245,7 @@ motion by assuming that stars at a given stream longitude, $\phi_1$, have a
 distance given by $d(\phi_1) = (0.05 \, \phi_1 + 10)~\textrm{kpc}$;
 we assume a solar velocity $\bs{v}_\odot = (11.1, 232.24, 7.25)~\kms$
 (\citealt{Schonrich:2010, Bovy:2015}).
-\changes{In detail, we project the solar velocity vector onto the tangent space at each star's sky position, convert to angular motion using the assumed distance, and subtract the solar component from each star's proper motion (this is done using the \package{astropy} and \package{gala} packages).}
+\changes{In detail, we project the solar velocity vector onto the tangent space at each star's sky position, convert to angular motion using the assumed distance, and subtract the solar component from each star's proper motion (this is done using the \package{astropy} \citep{astropy} and \package{gala} \citep{gala} packages).}
 \figurename~\ref{fig:selection} (top right) shows stars with $|\phi_2| <
 1^\circ$ in solar-reflex-corrected proper motion components in the GD-1 system,
 $\mu_{\phi_1, \odot}$ and $\mu_{\phi_2, \odot}$.
@@ -574,6 +574,7 @@ We generate posterior samples in the parameters of this model in each $\phi_1$ r
 We use an ensemble Markov Chain Monte Carlo (MCMC) sampler (\citealt{Foreman-Mackey:2013}) to generate posterior samples and run the sampler with 64 walkers for a total of 4096 steps, discarding the first 2048 samples as ``burn-in.''
 \figurename~\ref{fig:density-model} summarizes the results of this inference: top row shows histograms of the $\phi_2$ positions of stars in each $\phi_1$ range (left to right) with maximum a posteriori inferred density over-plotted (black curve) and bottom row shows marginal posterior probability distributions for $\alpha_{\textrm{bg}}$, $\alpha_{\textrm{s}}$, and $\alpha_{\textrm{f}}$ estimated from the posterior samples for each $\phi_1$ range.
 In each of the feature fields, the posterior samples for the feature mixture component amplitude are inconsistent with 0, implying that the features are not consistent with the background stellar density.
+In each of the $\phi_1$ regions, the 15th and 85th percentile values of the feature amplitude, $\alpha_{\textrm{f}}$, are $(0.12, 0.19)$ (spur), $(0.07, 0.22)$ (blob), and $(0.005, 0.103)$ (control).
 }
 
 \begin{figure}
@@ -581,7 +582,7 @@ In each of the feature fields, the posterior samples for the feature mixture com
 \includegraphics[width=\textwidth]{density-model.pdf}
 \end{center}
 \caption{
-{\bf \emph{Top row}: Density of stars in $\phi_2$ (grey) and inferred density (black curve) for regions around the spur, blob, and a control field.
+\changes{\emph{Top row}: Density of stars in $\phi_2$ (grey) and inferred density (black curve) for regions around the spur, blob, and a control field.
 The model for the density includes components for the stream, background, and a feature overdensity (the spur or the blob), but with amplitudes that are allowed to go to zero (see \sectionname~\ref{sec:res_gap} for more details.)
 \emph{Bottom row}: Inferred posterior probability distributions over the amplitude ($\alpha$) of each component in each field: $\alpha_{\textrm{s}}$ for the stream, $\alpha_{\textrm{bg}}$ for the background, and $\alpha_{\textrm{f}}$ for the feature.
 In both feature fields, the model prefers an additional component to describe the feature, whereas in the control field the density is consistent with stream + background.}
