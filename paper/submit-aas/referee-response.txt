@@ -1,4 +1,4 @@
-We thank the referee for a constructive report that has improved the quality of this work. Below, we have copied the remarks from the referee (indented by >) and have responded to each point in text that immediately follows.
+We thank the referee for a constructive report that has improved the quality of this work. Below, we have copied the remarks from the referee (indented by >) and have responded to each point in text that immediately follows. A few other minor changes have been made directly to the text and are indicated as bold text in the updated manuscript.
 
 
 > The analysis of the Gaia DR2 data requires some care, especially at the faint
