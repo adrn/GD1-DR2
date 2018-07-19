@@ -22,14 +22,16 @@
 > exclusion of such stars (if any) does not give rise to gaps or
 > spurious over-densities.
 
-We have attached the requested figure to the report. We don't see any correlation between the off-track features described in this paper and the requested maps.
+We have attached the requested figure to the report. We do not see any correlation between the off-track features described in this paper and the CMD-selected stars with 2-parameter solutions.
+
+We have compared the fraction of good solutions in the spur, in the region between the stream and the spur, and in the stream at the same range of longitudes. We consider the longitude range -35 < phi1 < -30, and 3 ranges in phi2: (-0.4, 0.4), (0.4, 0.9), (0.9, 1.7) for the stream, region between stream and spur, and spur, respectively. In these 3 regions, we find 84%, 88%, 89% of the 5 parameter solution stars pass the unit weight error criteria. 
 
 > I would also like to ask the authors to overplot their selected GD-1
 > stream stars (i.e. those shown in the bottom panel of Fig. 1), in the
 > maps of the density of 2 parameter solutions, the unit weight
 > error and the extinction map.
 
-We have attached these figures to the response.
+We have attached these figures to the response. Again, while there is clearly structure in these maps, we do not see any relation between the data quality or incompleteness and the new off-track features reported in this paper. We do see issues with completeness at phi1 < -50 due to the scan pattern, and we discuss this in the text.
 
 > Finally a small point regarding the presence of a progenitor. Given
 > that it is very difficult to identify the feature the authors
