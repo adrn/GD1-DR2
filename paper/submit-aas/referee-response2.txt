@@ -22,7 +22,7 @@
 > exclusion of such stars (if any) does not give rise to gaps or
 > spurious over-densities.
 
-TODO: Ana needs to crossmatch the 2par solutions with pan-starrs
+We have attached the requested figure to the report. We don't see any correlation between the off-track features described in this paper and the requested maps.
 
 > I would also like to ask the authors to overplot their selected GD-1
 > stream stars (i.e. those shown in the bottom panel of Fig. 1), in the
