@@ -1,0 +1,42 @@
+> However, the maps sent to the referee but not included in the paper do
+> not ease my concerns on how robust their conclusions are. For example,
+> the figures show that the assumption of a uniform density may be
+> flawed given the number of features in the data. Especially the region
+> around the spur shows a high density of large values of the unit
+> weight error.
+>
+> Since their procedure starts with a selection of tentative members
+> based on proper motions, it would be good if the authors could make a
+> figure that shows both the stars selected according to the proper
+> motion (i.e. the sample they already have) and the stars with 2
+> parameter solutions that fall within the CMD selection. It would also
+> be useful to assess the relative number of good and bad solutions in
+> the blob and the spur, as well as in the regions around the gaps.
+>
+> The issue is not so much the quality of the data that is kept (the 5
+> parameter solutions), but what does incompleteness in this dataset
+> imply? The presence of stars with only 2 parameter solutions implies
+> that such stars would not be selected according to the procedure
+> followed by the authors, and their exclusion could potentially lead to
+> "features". A plot as I propose would help to double check that the
+> exclusion of such stars (if any) does not give rise to gaps or
+> spurious over-densities.
+
+We have attached the requested figure to the report. We do not see any correlation between the off-track features described in this paper and the CMD-selected stars with 2-parameter solutions.
+
+We have compared the fraction of good solutions in the spur, in the region between the stream and the spur, and in the stream at the same range of longitudes. We consider the longitude range -35 < phi1 < -30, and 3 ranges in phi2: (-0.4, 0.4), (0.4, 0.9), (0.9, 1.7) for the stream, region between stream and spur, and spur, respectively. In these 3 regions, we find 84%, 88%, 89% of the 5 parameter solution stars pass the unit weight error criteria. 
+
+> I would also like to ask the authors to overplot their selected GD-1
+> stream stars (i.e. those shown in the bottom panel of Fig. 1), in the
+> maps of the density of 2 parameter solutions, the unit weight
+> error and the extinction map.
+
+We have attached these figures to the response. Again, while there is clearly structure in these maps, we do not see any relation between the data quality or incompleteness and the new off-track features reported in this paper. We do see issues with completeness at phi1 < -50 due to the scan pattern, and we discuss this in the text.
+
+> Finally a small point regarding the presence of a progenitor. Given
+> that it is very difficult to identify the feature the authors
+> associated to the progenitor clearly from the figures presented, and
+> its significance is not demonstrated in the paper, it does not really
+> seem to deserve a mention in the abstract.
+
+We have removed this statement from the abstract.
