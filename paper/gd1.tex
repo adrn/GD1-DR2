@@ -69,8 +69,7 @@ Using data from the \gaia\ second data release combined with
 \pans\ photometry, we present a sample of highly-probable members of the
 longest cold stream in the Milky Way, GD-1.
 The resulting map of GD-1: (1) extends the apparent length of the stream by
-$20^\circ$, (2) detects high-contrast gaps along the stream, and (3) indicates
-the existence of stream members perturbed off the main stream track.
+$20^\circ$, (2) \changes{reveals plausible locations for the progenitor}, (3) detects high-contrast gaps along the stream, and (4) indicates the existence of stream members perturbed off the main stream track.
 These discoveries are only possible because of the exquisite astrometry
 from \gaia, which permits a clean separation of the stream from Milky Way
 stars.
@@ -369,14 +368,13 @@ Median stream properties computed from the proper motion and CMD filtered GD-1
 stars, and the same for a toy model for the stream track.
 \textit{Panel (a)}: Sky positions of candidate GD-1 stars.
 Lines show a \changes{4th}-order polynomial fit to the median stream track offset by $\pm 0.75^\circ$; the enclosed region is adopted as the nominal stream region.
-\textit{Panel (b)}: Sky positions of simulated star particles from a mock stream
-model of the GD-1 stream.
-\textit{Panel (c)}: Background-subtracted surface-density estimates computed in
+\changes{\textit{Panels (b) and (c)}: Sky positions of simulated star particles from mock stream models of the GD-1 stream in which the progenitor is currently disrupting (toy model 1, panel b) or the progenitor fully disrupted 500 Myr ago and results in the observed under-density at $\phi_1 \sim -20^\circ$ (toy model 2, panel c).}
+\textit{Panel (d)}: Background-subtracted surface-density estimates computed in
 successive, overlapping $3^\circ$ windows for both GD-1 data and the model
 stream.
-\textit{Panel (d)}: Median proper motion along the stream computed in the same
+\textit{Panel (e)}: Median proper motion along the stream computed in the same
 bins as previous panel \changes{(not solar reflex corrected)}.
-\textit{Panel (e)}: Same as Panel (d), but for proper motion in stream latitude.
+\textit{Panel (f)}: Same as Panel (d), but for proper motion in stream latitude.
 }
 \label{fig:track-and-model}
 \end{figure}
@@ -491,24 +489,21 @@ the mass, assuming a \citet{Bovy:2012} model of the stellar disk.
 % $\rm R_d = 3~\kpc$ (an intermediate value of recent measurements, e.g.,
 % \citealt{Bovy:2012}).
 
-To initialize the model stream generation, we assume that the present day
-position of the progenitor system is at $\phi_1 = -13.5^\circ$, the peak of the
-observed surface density profile.
-We numerically integrate backwards from this location for $4~\textrm{Gyr}$,
-then forward-generate the model stream, releasing stream particles at each
+\changes{To initialize the model stream generation, we assume that the present day position of the progenitor system is either at $\phi_1 = -13.5^\circ$, the peak of the observed surface density profile (toy model 1), or was fully-disrupted 500 Myr in the past and the under-density at $\phi_1 = -20^\circ$ represents the fully-disrupted progenitor (toy model 2).}
+We numerically integrate backwards from these locations for $4~\textrm{Gyr}$,
+then forward-generate the model streams, releasing stream particles at each
 timestep.
 We assume an initial progenitor mass of $M=10^5~\msun$, and linearly decrease
-the mass of the progenitor until its full disruption at the present.
+the mass of the progenitor until its full disruption at the \changes{present (toy model 1), or at $t = -500~\textrm{Myr}$ (toy model 2)}.
 % day, where we assume $M = 0~\msun$
 % (i.e. fully disrupted).
-Stream properties computed from this resulting model stream are plotted in
-\figurename~\ref{fig:track-and-model} as dashed (orange) lines.
-The model stream qualitatively matches the stream track in all phase-space
-dimensions, but has a much smoother surface density profile along the extent of
+Stream properties computed from the resulting model streams are plotted in
+\figurename~\ref{fig:track-and-model} as dashed (orange and purple) lines.
+The model streams qualitatively match the stream track in all phase-space
+dimensions, but have much smoother surface density profiles along the extent of
 the stream.
 The broadening in the observed stream at negative longitudes is also seen in the model stream and is expected for older parts of the stream that have phase-mixed for longer times.
-We therefore don't expect that the observed surface density variations can be fully explained
-by, e.g., epicyclic overdensities (\citealt{Kupper:2012}).
+We therefore don't expect that the observed surface density variations can be fully explained by, e.g., epicyclic overdensities (\citealt{Kupper:2012}).
 
 
 \subsection{Off-track features}
