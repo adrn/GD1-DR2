@@ -22,9 +22,9 @@
 > exclusion of such stars (if any) does not give rise to gaps or
 > spurious over-densities.
 
-We have attached the requested figure to the report. We do not see any correlation between the off-track features described in this paper and the CMD-selected stars with 2-parameter solutions.
+We have attached the requested figure to the report. We do not see correlations between the off-track features described in this paper and the CMD-selected stars with 2-parameter solutions.
 
-We have compared the fraction of good solutions in the spur, in the region between the stream and the spur, and in the stream at the same range of longitudes. We consider the longitude range -35 < phi1 < -30, and 3 ranges in phi2: (-0.4, 0.4), (0.4, 0.9), (0.9, 1.7) for the stream, region between stream and spur, and spur, respectively. In these 3 regions, we find 84%, 88%, 89% of the 5 parameter solution stars pass the unit weight error criteria. 
+We have compared the fraction of good solutions in the spur, in the region between the stream and the spur, and in the stream at the same range of longitudes. We consider the longitude range -35 < phi1 < -30, and 3 ranges in phi2: (-0.4, 0.4), (0.4, 0.9), (0.9, 1.7) for the stream, region between stream and spur, and spur, respectively. In these 3 regions, we find 84%, 88%, 89% of the 5 parameter solution stars pass the unit weight error criteria.
 
 > I would also like to ask the authors to overplot their selected GD-1
 > stream stars (i.e. those shown in the bottom panel of Fig. 1), in the
@@ -39,4 +39,4 @@ We have attached these figures to the response. Again, while there is clearly st
 > its significance is not demonstrated in the paper, it does not really
 > seem to deserve a mention in the abstract.
 
-We have removed this statement from the abstract.
+We agree that the uniqueness of the previous claim was not strong, and we have both rephrased the text and added an alternate model stream for comparison. With Figure 2, we now show two plausible locations for the progenitor: one in which the progenitor disrupts at present day and results in the over-density, and one in which the progenitor disrupted several orbits ago and can explain one of the observed under-densities. 
