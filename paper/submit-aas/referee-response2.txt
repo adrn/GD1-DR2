@@ -1,3 +1,5 @@
+We thank the referee for the suggestions. We believe we have now addressed all of the referee's comments either in the manuscript text or response below. We have also attached a number of figures to the response that were suggested or requested by the referee.
+
 > However, the maps sent to the referee but not included in the paper do
 > not ease my concerns on how robust their conclusions are. For example,
 > the figures show that the assumption of a uniform density may be
@@ -26,6 +28,8 @@ We have attached the requested figure to the report. We do not see correlations 
 
 We have compared the fraction of good solutions in the spur, in the region between the stream and the spur, and in the stream at the same range of longitudes. We consider the longitude range -35 < phi1 < -30, and 3 ranges in phi2: (-0.4, 0.4), (0.4, 0.9), (0.9, 1.7) for the stream, region between stream and spur, and spur, respectively. In these 3 regions, we find 84%, 88%, 89% of the 5 parameter solution stars pass the unit weight error criteria.
 
+(we have added text to the manuscript, bolded, to describe the points above)
+
 > I would also like to ask the authors to overplot their selected GD-1
 > stream stars (i.e. those shown in the bottom panel of Fig. 1), in the
 > maps of the density of 2 parameter solutions, the unit weight
@@ -39,4 +43,4 @@ We have attached these figures to the response. Again, while there is clearly st
 > its significance is not demonstrated in the paper, it does not really
 > seem to deserve a mention in the abstract.
 
-We agree that the uniqueness of the previous claim was not strong, and we have both rephrased the text and added an alternate model stream for comparison. With Figure 2, we now show two plausible locations for the progenitor: one in which the progenitor disrupts at present day and results in the over-density, and one in which the progenitor disrupted several orbits ago and can explain one of the observed under-densities. 
+We agree that the uniqueness of the previous claim was not strong, and we have both rephrased the text and added an alternate model stream for comparison. With Figure 2, we now show two plausible locations for the progenitor: one in which the progenitor disrupts at present day and results in the over-density, and one in which the progenitor disrupted several orbits ago and can explain one of the observed under-densities.
