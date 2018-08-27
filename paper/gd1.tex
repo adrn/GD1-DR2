@@ -30,7 +30,9 @@
 \renewcommand{\tablename}{Table}
 
 \newcommand{\todo}[1]{{\color{red} TODO: #1}}
-\newcommand{\changes}[1]{{\textbf{#1}}}
+
+% \newcommand{\changes}[1]{{\textbf{#1}}}
+\newcommand{\changes}[1]{{#1}}
 
 % aastex parameters
 % \received{not yet; THIS IS A DRAFT}
@@ -693,7 +695,7 @@ at Harvard University.
 }
 
 \software{
-    \package{Astropy} \citep{astropy},
+    \package{Astropy} \citep{astropy, astropy:2018},
     \package{dustmaps}\footnote{\url{https://github.com/gregreen/dustmaps}},
     \package{gala} \citep{gala},
     \package{IPython} \citep{ipython},
