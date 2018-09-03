@@ -3,3 +3,6 @@ plots
 data
 *.zip
 notebooks
+paper/submit-*
+*.hdf5
+*.h5
